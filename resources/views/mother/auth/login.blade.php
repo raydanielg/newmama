@@ -17,7 +17,7 @@
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             min-height: 100vh;
-            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 30%, #bfdbfe 70%, #93c5fd 100%);
+            background: #f0f4ff;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -26,14 +26,14 @@
 
         .login-container {
             width: 100%;
-            max-width: 480px;
+            max-width: 400px;
         }
 
         .login-card {
             background: white;
-            border-radius: 24px;
-            padding: 40px;
-            box-shadow: 0 25px 50px -12px rgba(30, 64, 175, 0.25);
+            border-radius: 20px;
+            padding: 48px 40px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 10px 15px -3px rgba(0, 0, 0, 0.08);
         }
 
         .login-header {
@@ -41,41 +41,24 @@
             margin-bottom: 32px;
         }
 
-        .logo-section {
+        .logo {
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            border-radius: 16px;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 12px;
-            margin-bottom: 24px;
-        }
-
-        .logo-section {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-            margin-bottom: 24px;
-        }
-
-        .logo-img {
-            width: 120px;
-            height: auto;
-            max-height: 120px;
-            object-fit: contain;
-        }
-
-        .logo-text {
-            font-size: 24px;
+            margin: 0 auto 24px;
+            font-size: 28px;
+            color: white;
             font-weight: 700;
-            color: #1e40af;
-            text-align: center;
         }
 
         .welcome-title {
             font-size: 24px;
-            font-weight: 700;
-            color: #1f2937;
+            font-weight: 600;
+            color: #111827;
             margin-bottom: 8px;
         }
 
@@ -90,171 +73,95 @@
 
         .form-label {
             display: block;
-            font-size: 14px;
+            font-size: 13px;
             font-weight: 500;
             color: #374151;
-            margin-bottom: 8px;
-        }
-
-        .input-wrapper {
-            position: relative;
+            margin-bottom: 6px;
         }
 
         .form-input {
             width: 100%;
-            padding: 14px 16px 14px 48px;
-            border: 2px solid #e5e7eb;
-            border-radius: 12px;
-            font-size: 15px;
+            padding: 12px 16px;
+            border: 1px solid #e5e7eb;
+            border-radius: 10px;
+            font-size: 14px;
             font-family: inherit;
             transition: all 0.2s ease;
-            background: #f9fafb;
+            background: white;
         }
 
         .form-input:focus {
             outline: none;
             border-color: #3b82f6;
-            background: white;
-            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
         }
 
-        .input-icon {
-            position: absolute;
-            left: 16px;
-            top: 50%;
-            transform: translateY(-50%);
+        .form-input::placeholder {
             color: #9ca3af;
-            font-size: 18px;
+        }
+
+        .password-wrapper {
+            position: relative;
         }
 
         .password-toggle {
             position: absolute;
-            right: 16px;
+            right: 12px;
             top: 50%;
             transform: translateY(-50%);
             background: none;
             border: none;
             color: #9ca3af;
             cursor: pointer;
-            font-size: 18px;
+            font-size: 14px;
             padding: 4px;
         }
 
         .login-btn {
             width: 100%;
-            padding: 16px;
-            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            padding: 12px;
+            background: #1e40af;
             color: white;
             border: none;
-            border-radius: 12px;
-            font-size: 16px;
-            font-weight: 600;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 500;
             cursor: pointer;
             transition: all 0.2s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            margin-top: 24px;
+            margin-top: 8px;
         }
 
         .login-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px -5px rgba(30, 64, 175, 0.4);
+            background: #1e3a8a;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(30, 64, 175, 0.3);
         }
 
-        .login-btn:active {
-            transform: translateY(0);
-        }
-
-        .divider {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-            margin: 24px 0;
-            color: #9ca3af;
-            font-size: 13px;
-        }
-
-        .divider::before,
-        .divider::after {
-            content: '';
-            flex: 1;
-            height: 1px;
-            background: #e5e7eb;
-        }
-
-        .alt-actions {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-
-        .alt-btn {
-            width: 100%;
-            padding: 14px;
-            background: white;
-            border: 2px solid #e5e7eb;
-            border-radius: 12px;
-            font-size: 14px;
-            font-weight: 500;
-            color: #374151;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            text-decoration: none;
+        .signup-link {
             text-align: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-        }
-
-        .alt-btn:hover {
-            border-color: #3b82f6;
-            color: #3b82f6;
-            background: #eff6ff;
-        }
-
-        .help-section {
             margin-top: 24px;
-            padding-top: 24px;
-            border-top: 1px solid #e5e7eb;
-            text-align: center;
-        }
-
-        .help-text {
             font-size: 13px;
             color: #6b7280;
-            margin-bottom: 12px;
         }
 
-        .help-links {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        .help-link {
-            font-size: 13px;
+        .signup-link a {
             color: #1e40af;
-            text-decoration: none;
             font-weight: 500;
+            text-decoration: none;
         }
 
-        .help-link:hover {
+        .signup-link a:hover {
             text-decoration: underline;
-            color: #3b82f6;
         }
 
         .alert {
             padding: 12px 16px;
-            border-radius: 10px;
+            border-radius: 8px;
             margin-bottom: 20px;
-            font-size: 14px;
+            font-size: 13px;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
         }
 
         .alert-success {
@@ -275,54 +182,36 @@
             border: 1px solid #93c5fd;
         }
 
-        .emergency-banner {
-            background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
-            color: white;
-            padding: 16px;
-            border-radius: 12px;
+        .forgot-link {
             text-align: center;
-            margin-bottom: 24px;
+            margin-top: 16px;
+            font-size: 13px;
         }
 
-        .emergency-banner i {
-            font-size: 24px;
-            margin-bottom: 8px;
-            display: block;
+        .forgot-link a {
+            color: #6b7280;
+            text-decoration: none;
         }
 
-        .emergency-banner a {
-            color: white;
-            font-weight: 600;
+        .forgot-link a:hover {
+            color: #1e40af;
             text-decoration: underline;
         }
 
         @media (max-width: 480px) {
             .login-card {
-                padding: 24px;
-            }
-
-            .welcome-title {
-                font-size: 20px;
+                padding: 32px 24px;
             }
         }
     </style>
 </head>
 <body>
     <div class="login-container">
-        {{-- Emergency Banner --}}
-        <div class="emergency-banner">
-            <i class="fas fa-exclamation-triangle"></i>
-            <span>MSAADA WA DHARURA? Piga <a href="tel:114">114</a> au <a href="{{ route('mother.emergency') }}">Bofya Hapa</a></span>
-        </div>
-
         <div class="login-card">
             <div class="login-header">
-                <div class="logo-section">
-                    <img src="{{ asset('meetup_3669956.png') }}" alt="Mamacare AI" class="logo-img">
-                    <span class="logo-text">Mamacare AI</span>
-                </div>
-                <h1 class="welcome-title">Karibu Mama! 👋</h1>
-                <p class="welcome-subtitle">Ingia kwenye dashboard yako kwa ufuatiliaji wa afya yako</p>
+                <div class="logo">M</div>
+                <h1 class="welcome-title">Welcome back</h1>
+                <p class="welcome-subtitle">Log in to Mamacare AI</p>
             </div>
 
             @if(session('success'))
@@ -350,21 +239,17 @@
                 @csrf
 
                 <div class="form-group">
-                    <label class="form-label">MK Number au Nambari ya WhatsApp</label>
-                    <div class="input-wrapper">
-                        <i class="fas fa-id-card input-icon"></i>
-                        <input type="text" name="login" class="form-input" placeholder="MFANO: MK-00001 au 07XXXXXXXX" value="{{ old('login') }}" required>
-                    </div>
+                    <label class="form-label">Phone Number</label>
+                    <input type="tel" name="login" class="form-input" placeholder="e.g. 07XX XXX XXX" value="{{ old('login') }}" required>
                     @error('login')
                         <span style="color: #dc2626; font-size: 12px; margin-top: 4px; display: block;">{{ $message }}</span>
                     @enderror
                 </div>
 
                 <div class="form-group">
-                    <label class="form-label">Nenosiri (Password)</label>
-                    <div class="input-wrapper">
-                        <i class="fas fa-lock input-icon"></i>
-                        <input type="password" name="password" class="form-input" id="password" placeholder="Weka nenosiri lako" required>
+                    <label class="form-label">Password</label>
+                    <div class="password-wrapper">
+                        <input type="password" name="password" class="form-input" id="password" placeholder="Enter your password" required>
                         <button type="button" class="password-toggle" onclick="togglePassword()">
                             <i class="fas fa-eye" id="toggleIcon"></i>
                         </button>
@@ -374,27 +259,15 @@
                     @enderror
                 </div>
 
-                <button type="submit" class="login-btn">
-                    <i class="fas fa-sign-in-alt"></i>
-                    <span>INGIA</span>
-                </button>
+                <button type="submit" class="login-btn">Continue</button>
             </form>
 
-            <div class="divider">AU</div>
-
-            <div class="alt-actions">
-                <a href="{{ route('join') }}" class="alt-btn">
-                    <i class="fas fa-user-plus"></i>
-                    <span>JIUNGE KAMA MAMA MPYA</span>
-                </a>
+            <div class="forgot-link">
+                <a href="{{ route('mother.forgot-password') }}">Forgot password?</a>
             </div>
 
-            <div class="help-section">
-                <p class="help-text">Je, unahitaji msaada?</p>
-                <div class="help-links">
-                    <a href="{{ route('mother.forgot-password') }}" class="help-link">Umesahau Nenosiri?</a>
-                    <a href="{{ route('mother.register') }}" class="help-link">Tengeneza Akaunti</a>
-                </div>
+            <div class="signup-link">
+                Don't have an account? <a href="{{ route('mother.register') }}">Sign up</a>
             </div>
         </div>
     </div>
