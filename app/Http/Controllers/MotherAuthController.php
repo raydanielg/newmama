@@ -218,7 +218,7 @@ class MotherAuthController extends Controller
         $request->session()->invalidate();
         $request->session()->regenerateToken();
 
-        return redirect()->route('join')
+        return redirect()->route('mother.login')
             ->with('success', 'You have been logged out successfully.');
     }
 
