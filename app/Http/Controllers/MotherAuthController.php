@@ -239,4 +239,46 @@ class MotherAuthController extends Controller
         $cleanPhone = preg_replace('/[^0-9]/', '', $phone);
         return $cleanPhone . '@mamacare.local';
     }
+
+    /**
+     * Redirect to Google for authentication
+     */
+    public function redirectToGoogle()
+    {
+        // TODO: Install and configure Socialite package for full integration
+        // For now, show info message
+        return redirect()->route('mother.login')
+            ->with('info', 'Google login coming soon. Please use email/password login for now.');
+    }
+
+    /**
+     * Handle Google callback
+     */
+    public function handleGoogleCallback()
+    {
+        // TODO: Implement Google OAuth callback
+        return redirect()->route('mother.login')
+            ->with('info', 'Google login coming soon.');
+    }
+
+    /**
+     * Redirect to Apple for authentication
+     */
+    public function redirectToApple()
+    {
+        // TODO: Install and configure Socialite package with Apple provider
+        // For now, show info message
+        return redirect()->route('mother.login')
+            ->with('info', 'Apple login coming soon. Please use email/password login for now.');
+    }
+
+    /**
+     * Handle Apple callback
+     */
+    public function handleAppleCallback()
+    {
+        // TODO: Implement Apple Sign In callback
+        return redirect()->route('mother.login')
+            ->with('info', 'Apple login coming soon.');
+    }
 }
