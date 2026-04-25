@@ -12,10 +12,16 @@
                     <span class="brand-konnect">AI</span>
                 </div>
             </div>
-            <div class="join-lang">
-                <button class="lang-btn active" data-lang="sw">SW</button>
-                <span class="lang-sep">|</span>
-                <button class="lang-btn" data-lang="en">EN</button>
+            <div class="join-header-actions">
+                <div class="join-lang">
+                    <button class="lang-btn active" data-lang="sw">SW</button>
+                    <span class="lang-sep">|</span>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                </div>
+                <a href="{{ route('mother.login') }}" class="join-signin-btn">
+                    <i class="fas fa-user-circle"></i>
+                    <span data-sw="Ingia" data-en="Sign In">Ingia</span>
+                </a>
             </div>
         </div>
 
