@@ -177,27 +177,23 @@
         }
 
         @media (max-width: 480px) {
-            .forgot-card {
-                padding: 24px;
+            .forgot-container {
+                padding: 0 16px;
             }
-
+            
             .welcome-title {
-                font-size: 20px;
+                font-size: 24px;
             }
         }
     </style>
 </head>
 <body>
     <div class="forgot-container">
-        <div class="forgot-card">
-            <div class="forgot-header">
-                <div class="logo-section">
-                    <img src="{{ asset('meetup_3669956.png') }}" alt="Mamacare AI" class="logo-img">
-                    <span class="logo-text">Mamacare AI</span>
-                </div>
-                <h1 class="welcome-title">Umesahau Nenosiri? 🤔</h1>
-                <p class="welcome-subtitle">Hakuna shida! Tutakusaidia kurudia upya</p>
-            </div>
+        <div class="forgot-header">
+            <img src="{{ asset('meetup_3669956.png') }}" alt="Mamacare AI" class="logo-img">
+            <h1 class="welcome-title">Forgot Password?</h1>
+            <p class="welcome-subtitle">Reset your Mamacare AI password</p>
+        </div>
 
             @if(session('error'))
                 <div class="alert alert-error">
@@ -254,13 +250,9 @@
                 </button>
             </form>
 
-            <div class="divider">AU</div>
-
-            <a href="{{ route('mother.login') }}" class="alt-btn">
-                <i class="fas fa-arrow-left"></i>
-                <span>RUDI KWENYE LOGIN</span>
-            </a>
-        </div>
+            <div class="login-link">
+                Remember your password? <a href="{{ route('mother.login') }}">Log in</a>
+            </div>
     </div>
 </body>
 </html>
