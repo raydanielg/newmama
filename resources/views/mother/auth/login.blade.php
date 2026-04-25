@@ -68,10 +68,6 @@
             margin-bottom: 20px;
         }
 
-        .form-group {
-            margin-bottom: 16px;
-        }
-
         .form-label {
             display: block;
             font-size: 12px;
@@ -203,16 +199,19 @@
         }
 
         @media (max-width: 480px) {
-            .login-card {
-                padding: 32px 24px;
+            .login-container {
+                padding: 0 16px;
+            }
+            
+            .welcome-title {
+                font-size: 24px;
             }
         }
     </style>
 </head>
 <body>
     <div class="login-container">
-        <div class="login-card">
-            <div class="login-header">
+        <div class="login-header">
                 <div class="logo">M</div>
                 <h1 class="welcome-title">Welcome back</h1>
                 <p class="welcome-subtitle">Log in to Mamacare AI</p>
@@ -273,7 +272,6 @@
             <div class="signup-link">
                 Don't have an account? <a href="{{ route('mother.register') }}">Sign up</a>
             </div>
-        </div>
     </div>
 
     <script>
