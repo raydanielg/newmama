@@ -150,13 +150,13 @@
     text-decoration: none;
     font-weight: 600;
     font-size: 12px;
-    background: #2f2a36;
+    background: #1e40af;
     color: #fff;
 }
 
 .auth-back:hover {
     color: #fff;
-    background: #241f2b;
+    background: #1d4ed8;
 }
 
 .auth-form-wrap {
@@ -197,13 +197,13 @@
 
 .auth-input:focus {
     background: #fff;
-    border-color: rgba(47, 42, 54, 0.30);
-    box-shadow: 0 0 0 0.25rem rgba(47, 42, 54, 0.12);
+    border-color: rgba(59, 130, 246, 0.50);
+    box-shadow: 0 0 0 0.25rem rgba(59, 130, 246, 0.15);
 }
 
 .auth-submit {
-    background: #2f2a36;
-    border-color: #2f2a36;
+    background: #1e40af;
+    border-color: #1e40af;
     border-radius: 10px;
     padding: 12px 14px;
     font-weight: 700;
@@ -213,8 +213,8 @@
 }
 
 .auth-submit:hover {
-    background: #241f2b;
-    border-color: #241f2b;
+    background: #1d4ed8;
+    border-color: #1d4ed8;
 }
 
 .auth-submit:disabled {
@@ -259,11 +259,11 @@
 .auth-link {
     text-decoration: none;
     font-weight: 600;
-    color: #2f2a36;
+    color: #1e40af;
 }
 
 .auth-link:hover {
-    color: #241f2b;
+    color: #1d4ed8;
     text-decoration: underline;
 }
 
