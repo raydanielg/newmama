@@ -68,6 +68,38 @@ Route::get('/api/regions/{region}/districts', function ($regionId) {
 
 Route::get('/api/mothers/approved', [App\Http\Controllers\Api\MotherIntakeController::class, 'approved'])->name('api.mothers.approved');
 
+// Mother Dashboard Routes
+Route::group(['prefix' => 'mother', 'as' => 'mother.'], function () {
+    Route::get('/dashboard', [App\Http\Controllers\MotherDashboardController::class, 'dashboard'])->name('dashboard');
+    Route::get('/profile', [App\Http\Controllers\MotherDashboardController::class, 'profile'])->name('profile');
+    
+    // Appointments
+    Route::get('/appointments', [App\Http\Controllers\MotherDashboardController::class, 'appointments'])->name('appointments');
+    Route::post('/appointments', [App\Http\Controllers\MotherDashboardController::class, 'storeAppointment'])->name('appointments.store');
+    
+    // Health Data
+    Route::get('/health-data', [App\Http\Controllers\MotherDashboardController::class, 'healthData'])->name('health-data');
+    Route::post('/health-data/weight', [App\Http\Controllers\MotherDashboardController::class, 'storeWeight'])->name('health-data.weight');
+    Route::post('/health-data/bp', [App\Http\Controllers\MotherDashboardController::class, 'storeBloodPressure'])->name('health-data.bp');
+    Route::post('/health-data/kicks', [App\Http\Controllers\MotherDashboardController::class, 'storeKickCount'])->name('health-data.kicks');
+    
+    // Alerts
+    Route::get('/alerts', [App\Http\Controllers\MotherDashboardController::class, 'alerts'])->name('alerts');
+    Route::post('/alerts/{alert}/read', [App\Http\Controllers\MotherDashboardController::class, 'markAlertRead'])->name('alerts.read');
+    
+    // Checklist
+    Route::get('/checklist', [App\Http\Controllers\MotherDashboardController::class, 'checklist'])->name('checklist');
+    Route::post('/checklist/{item}/toggle', [App\Http\Controllers\MotherDashboardController::class, 'toggleChecklistItem'])->name('checklist.toggle');
+    
+    // Daily Log
+    Route::get('/daily-log', [App\Http\Controllers\MotherDashboardController::class, 'dailyLog'])->name('daily-log');
+    Route::post('/daily-log', [App\Http\Controllers\MotherDashboardController::class, 'storeDailyLog'])->name('daily-log.store');
+    
+    // Education & Emergency
+    Route::get('/education', [App\Http\Controllers\MotherDashboardController::class, 'education'])->name('education');
+    Route::get('/emergency', [App\Http\Controllers\MotherDashboardController::class, 'emergency'])->name('emergency');
+});
+
 Auth::routes();
 
 Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin', 'admin_login_activity'], 'as' => 'admin.'], function () {
