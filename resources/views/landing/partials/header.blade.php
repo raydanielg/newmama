@@ -57,7 +57,7 @@
             </nav>
 
             <div class="landing-nav-actions">
-                <a class="landing-nav-cta" href="{{ route('join') }}">Join Now</a>
+                <a class="landing-nav-cta" href="{{ route('mother.login') }}">Mama Login</a>
             </div>
         </div>
     </div>
