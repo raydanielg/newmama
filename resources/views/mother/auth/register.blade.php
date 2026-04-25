@@ -254,10 +254,8 @@
         <div class="register-card">
             <div class="register-header">
                 <div class="logo-section">
-                    <div class="logo-icon">
-                        <i class="fas fa-heart-pulse"></i>
-                    </div>
-                    <span class="logo-text">MamaCare</span>
+                    <img src="{{ asset('meetup_3669956.png') }}" alt="Mamacare AI" class="logo-img">
+                    <span class="logo-text">Mamacare AI</span>
                 </div>
                 <h1 class="welcome-title">Tengeneza Akaunti</h1>
                 <p class="welcome-subtitle">Umesajili hapo awali? Weka taarifa zako hapa</p>
