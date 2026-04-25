@@ -9,7 +9,7 @@
 
         <div class="landing-split-right animate__animated animate__fadeInUp animate__delay-1s">
             <div class="landing-panel">
-                <p class="landing-p">We believe no woman should go through motherhood feeling alone or uncertain. Through Malkia Konnect, we provide:</p>
+                <p class="landing-p">We believe no woman should go through motherhood feeling alone or uncertain. Through Mamacare AI, we provide:</p>
                 <div class="landing-list-card">
                     <div class="landing-list-item">
                         <div class="landing-bullet" aria-hidden="true">

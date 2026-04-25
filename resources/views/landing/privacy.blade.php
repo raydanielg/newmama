@@ -15,7 +15,7 @@
             <div class="landing-panel animate__animated animate__fadeInUp animate__delay-1s">
                 <div class="landing-legal-content">
                     <h3>1. Introduction</h3>
-                    <p>At Malkia Konnect, we respect your privacy and are committed to protecting your personal data. This privacy policy will inform you as to how we look after your personal data when you visit our website.</p>
+                    <p>At Mamacare AI, we respect your privacy and are committed to protecting your personal data. This privacy policy will inform you as to how we look after your personal data when you visit our website.</p>
 
                     <h3>2. The Data We Collect</h3>
                     <p>We may collect, use, store and transfer different kinds of personal data about you which we have grouped together as follows:</p>

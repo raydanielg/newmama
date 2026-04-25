@@ -1,7 +1,7 @@
 <section class="landing-section landing-commitment">
     <div class="landing-container landing-commitment-inner animate__animated animate__fadeInUp">
         <div class="landing-chip">OUR COMMITMENT</div>
-        <h2 class="landing-h2">With Malkia, you are never alone</h2>
+        <h2 class="landing-h2">With Mamacare, you are never alone</h2>
         <p class="landing-p">We are committed to walking this journey with every mother — from the first trimester to postpartum recovery and beyond.</p>
         <p class="landing-p">You are supported, understood, and empowered every step of the way.</p>
 
@@ -20,7 +20,7 @@
                     </div>
                 @empty
                     <div class="landing-testimonial">
-                        <div class="landing-testimonial-quote">“Malkia Konnect made me feel calm and supported. I got guidance when I needed it most.”</div>
+                        <div class="landing-testimonial-quote">"Mamacare AI made me feel calm and supported. I got guidance when I needed it most."</div>
                         <div class="landing-testimonial-meta">
                             <span class="landing-testimonial-name">Amina S.</span>
                             <span class="landing-testimonial-sep">·</span>
