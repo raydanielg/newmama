@@ -29,237 +29,153 @@
             max-width: 340px;
         }
 
-        .register-card {
-            background: white;
-            border-radius: 24px;
-            padding: 40px;
-            box-shadow: 0 25px 50px -12px rgba(30, 64, 175, 0.25);
-        }
-
         .register-header {
             text-align: center;
-            margin-bottom: 32px;
-        }
-
-        .logo-section {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-            margin-bottom: 24px;
-        }
-
-        .logo-section {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
             margin-bottom: 24px;
         }
 
         .logo-img {
-            width: 120px;
+            width: 80px;
             height: auto;
-            max-height: 120px;
-            object-fit: contain;
-        }
-
-        .logo-text {
-            font-size: 24px;
-            font-weight: 700;
-            color: #1e40af;
-            text-align: center;
+            margin: 0 auto 20px;
+            display: block;
+            filter: drop-shadow(0 10px 30px rgba(0,0,0,0.2));
         }
 
         .welcome-title {
-            font-size: 24px;
-            font-weight: 700;
-            color: #1f2937;
-            margin-bottom: 8px;
+            font-size: 26px;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 6px;
+            text-align: center;
         }
 
         .welcome-subtitle {
-            font-size: 14px;
-            color: #6b7280;
+            font-size: 13px;
+            color: rgba(255,255,255,0.8);
+            text-align: center;
+            margin-bottom: 28px;
         }
 
         .form-group {
-            margin-bottom: 20px;
+            margin-bottom: 16px;
         }
 
         .form-label {
             display: block;
-            font-size: 14px;
+            font-size: 12px;
             font-weight: 500;
-            color: #374151;
-            margin-bottom: 8px;
-        }
-
-        .input-wrapper {
-            position: relative;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
         .form-input {
             width: 100%;
-            padding: 14px 16px 14px 48px;
-            border: 2px solid #e5e7eb;
+            padding: 14px 16px;
+            border: none;
             border-radius: 12px;
             font-size: 15px;
             font-family: inherit;
             transition: all 0.2s ease;
-            background: #f9fafb;
+            background: rgba(255,255,255,0.95);
+            color: #1f2937;
         }
 
         .form-input:focus {
             outline: none;
-            border-color: #ec4899;
             background: white;
-            box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.1);
+            box-shadow: 0 0 0 3px rgba(255,255,255,0.3);
         }
 
-        .input-icon {
-            position: absolute;
-            left: 16px;
-            top: 50%;
-            transform: translateY(-50%);
+        .form-input::placeholder {
             color: #9ca3af;
-            font-size: 18px;
         }
 
         .register-btn {
             width: 100%;
-            padding: 16px;
-            background: linear-gradient(135deg, #ec4899 0%, #be185d 100%);
+            padding: 12px;
+            background: #111;
             color: white;
             border: none;
-            border-radius: 12px;
-            font-size: 16px;
-            font-weight: 600;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 500;
             cursor: pointer;
             transition: all 0.2s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            margin-top: 24px;
+            margin-top: 20px;
         }
 
         .register-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px -5px rgba(236, 72, 153, 0.4);
+            background: #000;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
         }
 
-        .divider {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-            margin: 24px 0;
-            color: #9ca3af;
-            font-size: 13px;
-        }
-
-        .divider::before,
-        .divider::after {
-            content: '';
-            flex: 1;
-            height: 1px;
-            background: #e5e7eb;
-        }
-
-        .alt-btn {
-            width: 100%;
-            padding: 14px;
-            background: white;
-            border: 2px solid #e5e7eb;
-            border-radius: 12px;
-            font-size: 14px;
-            font-weight: 500;
-            color: #374151;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            text-decoration: none;
+        .login-link {
             text-align: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
+            margin-top: 20px;
+            font-size: 13px;
+            color: rgba(255,255,255,0.7);
         }
 
-        .alt-btn:hover {
-            border-color: #ec4899;
-            color: #ec4899;
-            background: #fdf2f8;
+        .login-link a {
+            color: white;
+            font-weight: 500;
+            text-decoration: none;
+        }
+
+        .login-link a:hover {
+            text-decoration: underline;
         }
 
         .alert {
-            padding: 12px 16px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-            font-size: 14px;
+            padding: 10px 14px;
+            border-radius: 8px;
+            margin-bottom: 16px;
+            font-size: 13px;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
+        }
+
+        .alert-success {
+            background: rgba(220, 252, 231, 0.95);
+            color: #166534;
+            border: 1px solid #86efac;
         }
 
         .alert-error {
-            background: #fee2e2;
+            background: rgba(254, 226, 226, 0.95);
             color: #991b1b;
             border: 1px solid #fca5a5;
         }
 
         .alert-info {
-            background: #dbeafe;
+            background: rgba(219, 234, 254, 0.95);
             color: #1e40af;
             border: 1px solid #93c5fd;
         }
 
-        .info-box {
-            background: #fdf2f8;
-            border: 1px solid #fbcfe8;
-            border-radius: 12px;
-            padding: 16px;
-            margin-bottom: 24px;
-        }
-
-        .info-box-title {
-            font-size: 14px;
-            font-weight: 600;
-            color: #be185d;
-            margin-bottom: 8px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .info-box-text {
-            font-size: 13px;
-            color: #6b7280;
-            line-height: 1.5;
-        }
-
         @media (max-width: 480px) {
-            .register-card {
-                padding: 24px;
+            .register-container {
+                padding: 0 16px;
             }
-
+            
             .welcome-title {
-                font-size: 20px;
+                font-size: 24px;
             }
         }
     </style>
 </head>
 <body>
     <div class="register-container">
-        <div class="register-card">
-            <div class="register-header">
-                <div class="logo-section">
-                    <img src="{{ asset('meetup_3669956.png') }}" alt="Mamacare AI" class="logo-img">
-                    <span class="logo-text">Mamacare AI</span>
-                </div>
-                <h1 class="welcome-title">Tengeneza Akaunti</h1>
-                <p class="welcome-subtitle">Umesajili hapo awali? Weka taarifa zako hapa</p>
-            </div>
+        <div class="register-header">
+            <img src="{{ asset('meetup_3669956.png') }}" alt="Mamacare AI" class="logo-img">
+            <h1 class="welcome-title">Create Account</h1>
+            <p class="welcome-subtitle">Sign up to Mamacare AI</p>
+        </div>
 
             @if(session('error'))
                 <div class="alert alert-error">
