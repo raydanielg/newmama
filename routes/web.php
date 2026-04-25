@@ -68,8 +68,19 @@ Route::get('/api/regions/{region}/districts', function ($regionId) {
 
 Route::get('/api/mothers/approved', [App\Http\Controllers\Api\MotherIntakeController::class, 'approved'])->name('api.mothers.approved');
 
-// Mother Dashboard Routes
+// Mother Authentication Routes (Public)
 Route::group(['prefix' => 'mother', 'as' => 'mother.'], function () {
+    Route::get('/login', [App\Http\Controllers\MotherAuthController::class, 'showLoginForm'])->name('login');
+    Route::post('/login', [App\Http\Controllers\MotherAuthController::class, 'login']);
+    Route::get('/register', [App\Http\Controllers\MotherAuthController::class, 'showRegisterForm'])->name('register');
+    Route::post('/register', [App\Http\Controllers\MotherAuthController::class, 'register']);
+    Route::get('/forgot-password', [App\Http\Controllers\MotherAuthController::class, 'showForgotPasswordForm'])->name('forgot-password');
+    Route::post('/forgot-password', [App\Http\Controllers\MotherAuthController::class, 'forgotPassword']);
+});
+
+// Mother Dashboard Routes (Protected)
+Route::group(['prefix' => 'mother', 'middleware' => ['auth'], 'as' => 'mother.'], function () {
+    Route::post('/logout', [App\Http\Controllers\MotherAuthController::class, 'logout'])->name('logout');
     Route::get('/dashboard', [App\Http\Controllers\MotherDashboardController::class, 'dashboard'])->name('dashboard');
     Route::get('/profile', [App\Http\Controllers\MotherDashboardController::class, 'profile'])->name('profile');
     
