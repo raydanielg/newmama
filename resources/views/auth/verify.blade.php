@@ -43,7 +43,7 @@
                     </button>
                 </form>
 
-                <div class="auth-footer"> {{ date('Y') }} Mamacare AI. All Rights Reserved.</div>
+                <div class="auth-footer">© {{ date('Y') }} Mamacare AI. All Rights Reserved.</div>
             </div>
         </div>
     </div>
