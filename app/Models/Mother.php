@@ -8,6 +8,18 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Mother extends Model
 {
+    public const STATUSES = [
+        'pregnant' => 'Pregnant',
+        'new_parent' => 'New Parent',
+        'trying' => 'Trying to Conceive',
+    ];
+
+    public const STATUS_COLORS = [
+        'pregnant' => 'pink',
+        'new_parent' => 'blue',
+        'trying' => 'purple',
+    ];
+{
     protected $fillable = [
         'mk_number',
         'full_name',
