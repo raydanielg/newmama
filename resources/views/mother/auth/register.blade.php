@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MamaCare - Tengeneza Akaunti</title>
+    <title>Mamacare AI - Tengeneza Akaunti</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
@@ -17,7 +17,7 @@
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             min-height: 100vh;
-            background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 30%, #fbcfe8 70%, #f9a8d4 100%);
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 30%, #bfdbfe 70%, #93c5fd 100%);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -33,7 +33,7 @@
             background: white;
             border-radius: 24px;
             padding: 40px;
-            box-shadow: 0 25px 50px -12px rgba(236, 72, 153, 0.25);
+            box-shadow: 0 25px 50px -12px rgba(30, 64, 175, 0.25);
         }
 
         .register-header {
@@ -49,25 +49,27 @@
             margin-bottom: 24px;
         }
 
-        .logo-icon {
-            width: 56px;
-            height: 56px;
-            background: linear-gradient(135deg, #ec4899 0%, #be185d 100%);
-            border-radius: 16px;
+        .logo-section {
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
-            color: white;
-            font-size: 28px;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+
+        .logo-img {
+            width: 120px;
+            height: auto;
+            max-height: 120px;
+            object-fit: contain;
         }
 
         .logo-text {
-            font-size: 28px;
+            font-size: 24px;
             font-weight: 700;
-            background: linear-gradient(135deg, #ec4899 0%, #be185d 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            color: #1e40af;
+            text-align: center;
         }
 
         .welcome-title {
