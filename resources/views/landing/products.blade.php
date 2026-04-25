@@ -797,7 +797,7 @@
                 .then(result => {
                     if (result.success) {
                         if (data.payment_method === 'whatsapp' || result.redirect_url) {
-                            const whatsappMsg = `Hello Malkia Konnect, I've just placed an order (Order Token: ${result.token}). Please send me the payment link. View my order here: ${result.redirect_url}`;
+                            const whatsappMsg = `Hello Mamacare AI, I've just placed an order (Order Token: ${result.token}). Please send me the payment link. View my order here: ${result.redirect_url}`;
                             const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMsg)}`;
                             
                             Swal.fire({
@@ -896,7 +896,7 @@
             });
 
             function getWhatsAppMessage() {
-                let message = "Habari Malkia Konnect, naomba kuagiza bidhaa zifuatazo:\n\n";
+                let message = "Habari Mamacare AI, naomba kuagiza bidhaa zifuatazo:\n\n";
                 let total = 0;
                 cart.forEach((item, index) => {
                     const subtotal = item.price * item.quantity;
