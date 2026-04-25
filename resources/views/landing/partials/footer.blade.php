@@ -4,7 +4,7 @@
             {{-- Brand & About --}}
             <div class="landing-footer-col">
                 <a href="{{ url('/') }}" class="landing-footer-logo-link">
-                    <img src="{{ asset('LOGO-MALKIA-KONNECT-removebg-preview.png') }}" alt="Mamacare AI" class="landing-footer-logo">
+                    <img src="{{ asset('meetup_3669956.png') }}" alt="Mamacare AI" class="landing-footer-logo">
                 </a>
                 <p class="landing-footer-desc">
                     Supporting women through the journey of motherhood with care, knowledge, and empowerment.

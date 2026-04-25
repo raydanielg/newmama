@@ -85,7 +85,7 @@
     <div class="container">
         <div class="card receipt-card">
             <div class="receipt-header">
-                <img src="/LOGO-MALKIA-KONNECT-removebg-preview.png" height="40" alt="Logo" class="mb-3">
+                <img src="{{ asset('meetup_3669956.png') }}" alt="{{ config('app.name', 'Mamacare AI') }}" class="order-logo">
                 <h4 class="mb-1">Order #{{ $order->order_number }}</h4>
                 <p class="mb-0 opacity-75 small">Generated on {{ $order->created_at->format('M d, Y H:i') }}</p>
             </div>
