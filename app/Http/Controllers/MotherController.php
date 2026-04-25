@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Country;
 use App\Models\Mother;
+use App\Services\WhatsAppService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Validator;
@@ -52,6 +53,23 @@ class MotherController extends Controller
                     'locale' => $request->input('locale', 'sw')
                 ]
             ]);
+
+            // 🎉 Send WhatsApp confirmation message
+            try {
+                $whatsAppService = new WhatsAppService();
+                $whatsAppService->sendRegistrationConfirmation($mother);
+                
+                Log::info('WhatsApp confirmation sent', [
+                    'mother_id' => $mother->id,
+                    'mk_number' => $mother->mk_number,
+                ]);
+            } catch (\Exception $e) {
+                Log::error('Failed to send WhatsApp confirmation', [
+                    'mother_id' => $mother->id,
+                    'error' => $e->getMessage(),
+                ]);
+                // Don't fail registration if WhatsApp fails
+            }
 
             // Store info in session for Thank You page
             $locale = $request->input('locale', 'sw');
