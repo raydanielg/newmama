@@ -6,10 +6,10 @@
         {{-- Top Branding & Language --}}
         <div class="join-header">
             <div class="join-brand">
-                <img src="{{ asset('LOGO-MALKIA-KONNECT-removebg-preview.png') }}" alt="Malkia Konnect Logo" class="join-logo">
+                <img src="{{ asset('LOGO-MALKIA-KONNECT-removebg-preview.png') }}" alt="Mamacare AI Logo" class="join-logo">
                 <div class="join-brand-text">
-                    <span class="brand-malkia">Malkia</span>
-                    <span class="brand-konnect">Konnect</span>
+                    <span class="brand-malkia">Mamacare</span>
+                    <span class="brand-konnect">AI</span>
                 </div>
             </div>
             <div class="join-lang">
@@ -30,8 +30,8 @@
                    data-en="You don't have to walk this journey alone, Mama.">Huhitaji kutembea safari hii peke yako, Mama.</p>
                 <p class="join-welcome-text" 
                    data-sw="Kila mama anastahili mtu wa kumwambia 'utakuwa sawa.' Malkia Konnect ni rafiki yako ya uzazi, moja kwa moja kwenye WhatsApp yako. Bure. Binafsi. Kwa ajili yako." 
-                   data-en="Every mother deserves someone to tell her 'it will be okay.' Malkia Konnect is your motherhood friend, right on your WhatsApp. Free. Private. For you.">
-                    Kila mama anastahili mtu wa kumwambia "utakuwa sawa." Malkia Konnect ni rafiki yako ya uzazi, moja kwa moja kwenye WhatsApp yako. Bure. Binafsi. Kwa ajili yako.
+                   data-en="Every mother deserves someone to tell her 'it will be okay.' Mamacare AI is your motherhood friend, right on your WhatsApp. Free. Private. For you.">
+                    Kila mama anastahili mtu wa kumwambia "utakuwa sawa." Mamacare AI ni rafiki yako ya uzazi, moja kwa moja kwenye WhatsApp yako. Bure. Binafsi. Kwa ajili yako.
                 </p>
             </div>
 
@@ -256,7 +256,7 @@
                                     <span class="checkmark"></span>
                                     <span class="check-text" 
                                           data-sw="Nakubali kupokea ujumbe na ushauri wa uzazi kutoka Malkia Konnect kupitia WhatsApp yangu." 
-                                          data-en="I agree to receive messages and motherhood advice from Malkia Konnect through my WhatsApp.">Nakubali kupokea ujumbe na ushauri wa uzazi kutoka Malkia Konnect kupitia WhatsApp yangu.</span>
+                                          data-en="I agree to receive messages and motherhood advice from Mamacare AI through my WhatsApp.">Nakubali kupokea ujumbe na ushauri wa uzazi kutoka Mamacare AI kupitia WhatsApp yangu.</span>
                                 </label>
                             </div>
                         </div>

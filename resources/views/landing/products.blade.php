@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Our Products – {{ config('app.name', 'Malkia Konnect') }}</title>
+    <title>Our Products – {{ config('app.name', 'Mamacare AI') }}</title>
 
     <link rel="dns-prefetch" href="//fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
@@ -347,8 +347,8 @@
     <header class="simple-header">
         <div class="container">
             <div class="header-content">
-                <img src="/LOGO-MALKIA-KONNECT-removebg-preview.png" alt="Malkia Konnect" class="header-logo">
-                <h1 class="header-title">Malkia Konnect</h1>
+                <img src="/LOGO-MALKIA-KONNECT-removebg-preview.png" alt="Mamacare AI" class="header-logo">
+                <h1 class="header-title">Mamacare AI</h1>
             </div>
         </div>
     </header>
@@ -542,7 +542,7 @@
             const cartTotalElement = document.getElementById('cart-total');
             const proceedBtn = document.getElementById('proceed-to-step-2');
             const selectedProductId = @json($selectedProductId ?? null);
-            const snippePublicKey = @json($settings['snippe_public_key'] ?? 'pk_test_malkia_konnect_dummy');
+            const snippePublicKey = @json($settings['snippe_public_key'] ?? 'pk_test_mamacare_ai_dummy');
             const whatsappNumber = @json($settings['whatsapp_number'] ?? '255742710054');
 
             // Auto-select product if ID is in URL

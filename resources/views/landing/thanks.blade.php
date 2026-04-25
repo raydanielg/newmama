@@ -19,12 +19,12 @@
                 <h1 class="thanks-title">Welcome to the family, <br><span class="highlight-name">Mama {{ $motherName }}!</span></h1>
                 @if($mkNumber)
                     <div class="mk-number-badge mb-4">
-                        <span class="label">Your MK Number:</span>
+                        <span class="label">Your Mamacare ID:</span>
                         <span class="number">{{ $mkNumber }}</span>
                     </div>
                 @endif
                 <p class="thanks-text">
-                    Your journey with Malkia Konnect has officially started. We are so happy to have you with us!
+                    Your journey with Mamacare AI has officially started. We are so happy to have you with us!
                 </p>
 
                 <div class="thanks-info-box">
@@ -39,7 +39,7 @@
                         <span class="info-emoji">💖</span>
                         <div class="info-content">
                             <h4>Save our Number</h4>
-                            <p>Save Malkia Konnect so you don't miss our tips.</p>
+                            <p>Save Mamacare AI so you don't miss our tips.</p>
                         </div>
                     </div>
                 </div>
@@ -52,12 +52,12 @@
                 <h1 class="thanks-title">Karibu kwenye familia, <br><span class="highlight-name">Mama {{ $motherName }}!</span></h1>
                 @if($mkNumber)
                     <div class="mk-number-badge mb-4">
-                        <span class="label">Namba yako ya MK:</span>
+                        <span class="label">Namba yako ya Mamacare ID:</span>
                         <span class="number">{{ $mkNumber }}</span>
                     </div>
                 @endif
                 <p class="thanks-text">
-                    Safari yako na Malkia Konnect imeanza rasmi. Tumefurahi sana kuwa nawe!
+                    Safari yako na Mamacare AI imeanza rasmi. Tumefurahi sana kuwa nawe!
                 </p>
 
                 <div class="thanks-info-box">
@@ -72,7 +72,7 @@
                         <span class="info-emoji">💖</span>
                         <div class="info-content">
                             <h4>Hifadhi Namba</h4>
-                            <p>Hifadhi namba ya Malkia Konnect ili usipitwe na ushauri wetu.</p>
+                            <p>Hifadhi namba ya Mamacare AI ili usipitwe na ushauri wetu.</p>
                         </div>
                     </div>
                 </div>
