@@ -32,10 +32,10 @@
                         
                         <div class="article-author-info">
                             <div class="author-avatar">
-                                <img src="{{ asset('LOGO-MALKIA-KONNECT-removebg-preview.png') }}" alt="Malkia Konnect">
+                                <img src="{{ asset('LOGO-MALKIA-KONNECT-removebg-preview.png') }}" alt="Mamacare AI">
                             </div>
                             <div class="author-details">
-                                <span class="author-name">Malkia Konnect Team</span>
+                                <span class="author-name">Mamacare AI Team</span>
                                 <span class="publish-date">{{ \Carbon\Carbon::parse($article->published_at)->format('F d, Y') }}</span>
                             </div>
                         </div>
