@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MamaCare - Mama Login</title>
+    <title>Mamacare AI - Mama Login</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
@@ -17,7 +17,7 @@
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             min-height: 100vh;
-            background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 30%, #fbcfe8 70%, #f9a8d4 100%);
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 30%, #bfdbfe 70%, #93c5fd 100%);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -33,7 +33,7 @@
             background: white;
             border-radius: 24px;
             padding: 40px;
-            box-shadow: 0 25px 50px -12px rgba(236, 72, 153, 0.25);
+            box-shadow: 0 25px 50px -12px rgba(30, 64, 175, 0.25);
         }
 
         .login-header {
@@ -49,25 +49,27 @@
             margin-bottom: 24px;
         }
 
-        .logo-icon {
-            width: 56px;
-            height: 56px;
-            background: linear-gradient(135deg, #ec4899 0%, #be185d 100%);
-            border-radius: 16px;
+        .logo-section {
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
-            color: white;
-            font-size: 28px;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+
+        .logo-img {
+            width: 120px;
+            height: auto;
+            max-height: 120px;
+            object-fit: contain;
         }
 
         .logo-text {
-            font-size: 28px;
+            font-size: 24px;
             font-weight: 700;
-            background: linear-gradient(135deg, #ec4899 0%, #be185d 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            color: #1e40af;
+            text-align: center;
         }
 
         .welcome-title {
@@ -111,9 +113,9 @@
 
         .form-input:focus {
             outline: none;
-            border-color: #ec4899;
+            border-color: #3b82f6;
             background: white;
-            box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.1);
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
         }
 
         .input-icon {
@@ -141,7 +143,7 @@
         .login-btn {
             width: 100%;
             padding: 16px;
-            background: linear-gradient(135deg, #ec4899 0%, #be185d 100%);
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
             color: white;
             border: none;
             border-radius: 12px;
@@ -158,7 +160,7 @@
 
         .login-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 25px -5px rgba(236, 72, 153, 0.4);
+            box-shadow: 0 10px 25px -5px rgba(30, 64, 175, 0.4);
         }
 
         .login-btn:active {
@@ -208,9 +210,9 @@
         }
 
         .alt-btn:hover {
-            border-color: #ec4899;
-            color: #ec4899;
-            background: #fdf2f8;
+            border-color: #3b82f6;
+            color: #3b82f6;
+            background: #eff6ff;
         }
 
         .help-section {
@@ -235,13 +237,14 @@
 
         .help-link {
             font-size: 13px;
-            color: #ec4899;
+            color: #1e40af;
             text-decoration: none;
             font-weight: 500;
         }
 
         .help-link:hover {
             text-decoration: underline;
+            color: #3b82f6;
         }
 
         .alert {
@@ -315,10 +318,8 @@
         <div class="login-card">
             <div class="login-header">
                 <div class="logo-section">
-                    <div class="logo-icon">
-                        <i class="fas fa-heart-pulse"></i>
-                    </div>
-                    <span class="logo-text">MamaCare</span>
+                    <img src="{{ asset('meetup_3669956.png') }}" alt="Mamacare AI" class="logo-img">
+                    <span class="logo-text">Mamacare AI</span>
                 </div>
                 <h1 class="welcome-title">Karibu Mama! 👋</h1>
                 <p class="welcome-subtitle">Ingia kwenye dashboard yako kwa ufuatiliaji wa afya yako</p>
