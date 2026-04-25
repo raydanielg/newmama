@@ -130,6 +130,77 @@
             text-decoration: underline;
         }
 
+        .social-login {
+            margin-top: 24px;
+        }
+
+        .social-divider {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 20px;
+            color: rgba(255,255,255,0.6);
+            font-size: 12px;
+        }
+
+        .social-divider::before,
+        .social-divider::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: rgba(255,255,255,0.3);
+        }
+
+        .social-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .social-btn {
+            width: 100%;
+            padding: 12px 16px;
+            border: none;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .social-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        .google-btn {
+            background: white;
+            color: #374151;
+        }
+
+        .google-btn:hover {
+            background: #f9fafb;
+        }
+
+        .apple-btn {
+            background: #000;
+            color: white;
+        }
+
+        .apple-btn:hover {
+            background: #1a1a1a;
+        }
+
+        .social-icon {
+            width: 18px;
+            height: 18px;
+        }
+
         .alert {
             padding: 10px 14px;
             border-radius: 8px;
