@@ -5,7 +5,7 @@
     <div class="auth-card">
         <div class="auth-left">
             <div class="auth-left-inner">
-                <div class="auth-brand">Malkia Konnect</div>
+                <div class="auth-brand">Mamacare AI</div>
                 <h1 class="auth-title">Verify your email</h1>
                 <p class="auth-subtitle">We need to confirm your email address to secure your account.</p>
                 <p class="auth-tagline">Secure. Reliable. Built for your business.</p>
@@ -18,7 +18,7 @@
             </div>
 
             <div class="auth-form-wrap">
-                <div class="auth-form-brand">MALKIA KONNECT</div>
+                <div class="auth-form-brand">Mamacare AI</div>
                 <h2 class="auth-form-title">Email Verification</h2>
 
                 @if (session('resent'))
@@ -43,7 +43,7 @@
                     </button>
                 </form>
 
-                <div class="auth-footer">© {{ date('Y') }} Malkia Konnect LTD. All Rights Reserved.</div>
+                <div class="auth-footer"> {{ date('Y') }} Mamacare AI. All Rights Reserved.</div>
             </div>
         </div>
     </div>

@@ -10,19 +10,19 @@
                     </span>
                     <span>{{ $siteContact->phone ?? '+255 700 000 000' }}</span>
                 </a>
-                <a class="landing-topbar-link" href="mailto:{{ $siteContact->email ?? 'info@malkia.co.tz' }}">
+                <a class="landing-topbar-link" href="mailto:{{ $siteContact->email ?? 'info@mamacare.ai' }}">
                     <span class="landing-topbar-icon" aria-hidden="true">
                         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M4 6h16v12H4V6Z" stroke="currentColor" stroke-width="1.8"/>
                             <path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </span>
-                    <span>{{ $siteContact->email ?? 'info@malkia.co.tz' }}</span>
+                    <span>{{ $siteContact->email ?? 'info@mamacare.ai' }}</span>
                 </a>
             </div>
 
             <div class="landing-topbar-right">
-                <a class="landing-social" href="{{ $siteContact->instagram_url ?? 'https://instagram.com/malkiakonnect' }}" target="_blank" rel="noreferrer">
+                <a class="landing-social" href="{{ $siteContact->instagram_url ?? 'https://instagram.com/mamacareai' }}" target="_blank" rel="noreferrer">
                     <span class="landing-topbar-icon" aria-hidden="true">
                         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4Z" stroke="currentColor" stroke-width="1.8"/>
@@ -38,7 +38,7 @@
 
     <div class="landing-container landing-header-inner">
         <a class="landing-brand" href="{{ url('/') }}">
-            <img class="landing-logo" src="{{ asset('LOGO-MALKIA-KONNECT-removebg-preview.png') }}" alt="Malkia Konnect" />
+            <img class="landing-logo" src="{{ asset('LOGO-MALKIA-KONNECT-removebg-preview.png') }}" alt="Mamacare AI" />
         </a>
 
         <button class="landing-nav-toggle" type="button" aria-label="Toggle menu" data-landing-nav-toggle>
@@ -57,7 +57,7 @@
             </nav>
 
             <div class="landing-nav-actions">
-                <a class="landing-nav-cta" href="{{ route('join') }}">Join Konnect</a>
+                <a class="landing-nav-cta" href="{{ route('join') }}">Join Now</a>
             </div>
         </div>
     </div>

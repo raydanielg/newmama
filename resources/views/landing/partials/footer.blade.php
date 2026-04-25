@@ -4,7 +4,7 @@
             {{-- Brand & About --}}
             <div class="landing-footer-col">
                 <a href="{{ url('/') }}" class="landing-footer-logo-link">
-                    <img src="{{ asset('LOGO-MALKIA-KONNECT-removebg-preview.png') }}" alt="Malkia Konnect" class="landing-footer-logo">
+                    <img src="{{ asset('LOGO-MALKIA-KONNECT-removebg-preview.png') }}" alt="Mamacare AI" class="landing-footer-logo">
                 </a>
                 <p class="landing-footer-desc">
                     Supporting women through the journey of motherhood with care, knowledge, and empowerment.
@@ -26,8 +26,8 @@
                     <li><a href="{{ url('/') }}">Home</a></li>
                     <li><a href="{{ route('about') }}">About Us</a></li>
                     <li><a href="#">Our Services</a></li>
-                    <li><a href="#">Malkia Shop</a></li>
-                    <li><a href="{{ route('join') }}">Join Konnect</a></li>
+                    <li><a href="#">Mamacare Shop</a></li>
+                    <li><a href="{{ route('join') }}">Join Now</a></li>
                 </ul>
             </div>
 
@@ -58,7 +58,7 @@
         {{-- Bottom Bar --}}
         <div class="landing-footer-bottom">
             <div class="landing-footer-copy">
-                © {{ date('Y') }} Malkia Konnect LTD. All Rights Reserved.
+                © {{ date('Y') }} Mamacare AI. All Rights Reserved.
             </div>
             <div class="landing-footer-legal">
                 <a href="{{ route('privacy') }}">Privacy Policy</a>

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Malkia Wellness – {{ config('app.name', 'Malkia Konnect') }}</title>
+    <title>Mamacare AI – Your Maternal Health Companion</title>
 
     <link rel="dns-prefetch" href="//fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">

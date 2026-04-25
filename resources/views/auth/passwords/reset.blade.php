@@ -5,7 +5,7 @@
     <div class="auth-card">
         <div class="auth-left">
             <div class="auth-left-inner">
-                <div class="auth-brand">Malkia Konnect</div>
+                <div class="auth-brand">Mamacare AI</div>
                 <h1 class="auth-title">Set a new password</h1>
                 <p class="auth-subtitle">Choose a strong password to keep your account protected.</p>
                 <p class="auth-tagline">Secure. Reliable. Built for your business.</p>
@@ -18,7 +18,7 @@
             </div>
 
             <div class="auth-form-wrap">
-                <div class="auth-form-brand">MALKIA KONNECT</div>
+                <div class="auth-form-brand">Mamacare AI</div>
                 <h2 class="auth-form-title">Reset Password</h2>
 
                 <form method="POST" action="{{ route('password.update') }}" class="auth-form">
@@ -56,7 +56,7 @@
                         <span class="btn-spinner" aria-hidden="true"></span>
                     </button>
 
-                    <div class="auth-footer">© {{ date('Y') }} Malkia Konnect LTD. All Rights Reserved.</div>
+                    <div class="auth-footer">© {{ date('Y') }} Mamacare AI. All Rights Reserved.</div>
                 </form>
             </div>
         </div>

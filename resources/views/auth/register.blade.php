@@ -5,9 +5,9 @@
     <div class="auth-card">
         <div class="auth-left">
             <div class="auth-left-inner">
-                <div class="auth-brand">Malkia Konnect</div>
+                <div class="auth-brand">Mamacare AI</div>
                 <h1 class="auth-title">Create your account</h1>
-                <p class="auth-subtitle">Join Malkia Konnect to manage your services, requests, and activities securely.</p>
+                <p class="auth-subtitle">Join Mamacare AI to manage your services, requests, and activities securely.</p>
                 <p class="auth-tagline">Secure. Reliable. Built for your business.</p>
             </div>
         </div>
@@ -18,7 +18,7 @@
             </div>
 
             <div class="auth-form-wrap">
-                <div class="auth-form-brand">MALKIA KONNECT</div>
+                <div class="auth-form-brand">Mamacare AI</div>
                 <h2 class="auth-form-title">Register</h2>
 
                 <form method="POST" action="{{ route('register') }}" class="auth-form">
@@ -70,7 +70,7 @@
                         </div>
                     @endif
 
-                    <div class="auth-footer">© {{ date('Y') }} Malkia Konnect LTD. All Rights Reserved.</div>
+                    <div class="auth-footer">© {{ date('Y') }} Mamacare AI. All Rights Reserved.</div>
                 </form>
             </div>
         </div>

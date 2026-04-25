@@ -1,7 +1,7 @@
 <section id="about" class="landing-section">
     <div class="landing-container">
         <div class="landing-section-head animate__animated animate__fadeInUp">
-            <h2 class="landing-h2">Malkia is more than just a brand</h2>
+            <h2 class="landing-h2">Mamacare is more than just a brand</h2>
             <p class="landing-p">We understand that pregnancy, childbirth, and postpartum recovery come with both joy and challenges. That’s why we’ve created a trusted ecosystem that combines high-quality maternity products with real-time support, expert guidance, and a caring community.</p>
         </div>
 

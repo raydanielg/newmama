@@ -5,8 +5,8 @@
     <div class="auth-card">
         <div class="auth-left">
             <div class="auth-left-inner">
-                <div class="auth-brand">Malkia Konnect</div>
-                <h1 class="auth-title">Welcome to Malkia Konnect</h1>
+                <div class="auth-brand">Mamacare AI</div>
+                <h1 class="auth-title">Welcome to Mamacare AI</h1>
                 <p class="auth-subtitle">Sign in to manage your services, requests, and activities securely.</p>
                 <p class="auth-tagline">Secure. Reliable. Built for your business.</p>
             </div>
@@ -18,7 +18,7 @@
             </div>
 
             <div class="auth-form-wrap">
-                <div class="auth-form-brand">MALKIA KONNECT</div>
+                <div class="auth-form-brand">Mamacare AI</div>
                 <h2 class="auth-form-title">Login</h2>
 
                 <form method="POST" action="{{ route('login') }}" class="auth-form">
