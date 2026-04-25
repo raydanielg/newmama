@@ -9,15 +9,31 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('whatsapp_messages', function (Blueprint $table) {
-            $table->string('type')->default('general')->after('message');
-            $table->string('status')->default('pending')->after('type');
-            $table->string('external_id')->nullable()->after('status');
-            $table->json('metadata')->nullable()->after('external_id');
-            $table->json('response_data')->nullable()->after('metadata');
-            $table->timestamp('delivered_at')->nullable()->after('sent_at');
-            $table->timestamp('read_at')->nullable()->after('delivered_at');
-            $table->index(['to_number', 'status']);
-            $table->index(['type', 'status']);
+            // Only add columns if they don't exist
+            if (!Schema::hasColumn('whatsapp_messages', 'to_number')) {
+                $table->string('to_number')->nullable()->after('body');
+            }
+            if (!Schema::hasColumn('whatsapp_messages', 'message')) {
+                $table->text('message')->nullable()->after('to_number');
+            }
+            if (!Schema::hasColumn('whatsapp_messages', 'status')) {
+                $table->string('status')->default('pending')->after('type');
+            }
+            if (!Schema::hasColumn('whatsapp_messages', 'external_id')) {
+                $table->string('external_id')->nullable()->after('wa_message_id');
+            }
+            if (!Schema::hasColumn('whatsapp_messages', 'metadata')) {
+                $table->json('metadata')->nullable()->after('external_id');
+            }
+            if (!Schema::hasColumn('whatsapp_messages', 'response_data')) {
+                $table->json('response_data')->nullable()->after('metadata');
+            }
+            if (!Schema::hasColumn('whatsapp_messages', 'delivered_at')) {
+                $table->timestamp('delivered_at')->nullable()->after('sent_at');
+            }
+            if (!Schema::hasColumn('whatsapp_messages', 'read_at')) {
+                $table->timestamp('read_at')->nullable()->after('delivered_at');
+            }
         });
     }
 
