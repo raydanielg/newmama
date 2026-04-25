@@ -167,13 +167,47 @@ async function notifyLaravel(data) {
     }
 }
 
+// 🔍 Find Chrome executable
+function findChrome() {
+    const possiblePaths = [
+        // Windows
+        'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
+        'C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe',
+        process.env.LOCALAPPDATA + '\\Google\\Chrome\\Application\\chrome.exe',
+        process.env.PROGRAMFILES + '\\Google\\Chrome\\Application\\chrome.exe',
+        // Linux
+        '/usr/bin/google-chrome',
+        '/usr/bin/chromium-browser',
+        '/usr/bin/chromium',
+        '/snap/bin/chromium',
+        // macOS
+        '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
+    ];
+    
+    const fs = require('fs');
+    for (const path of possiblePaths) {
+        if (path && fs.existsSync(path)) {
+            logger.info(`Found Chrome at: ${path}`);
+            return path;
+        }
+    }
+    return null;
+}
+
 // 🤖 WhatsApp Client Setup
+const chromePath = process.env.PUPPETEER_EXECUTABLE_PATH || findChrome();
+
+if (chromePath) {
+    logger.info(`Using Chrome at: ${chromePath}`);
+}
+
 const client = new Client({
     authStrategy: new LocalAuth({
         dataPath: process.env.SESSION_PATH || './.wwebjs_auth'
     }),
     puppeteer: {
         headless: true,
+        executablePath: chromePath || undefined,
         args: [
             '--no-sandbox',
             '--disable-setuid-sandbox',
