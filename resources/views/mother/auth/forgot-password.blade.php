@@ -95,101 +95,73 @@
 
         .submit-btn {
             width: 100%;
-            padding: 16px;
-            background: linear-gradient(135deg, #ec4899 0%, #be185d 100%);
+            padding: 12px;
+            background: #111;
             color: white;
             border: none;
-            border-radius: 12px;
-            font-size: 16px;
-            font-weight: 600;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 500;
             cursor: pointer;
             transition: all 0.2s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            margin-top: 24px;
+            margin-top: 20px;
         }
 
         .submit-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px -5px rgba(236, 72, 153, 0.4);
+            background: #000;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
         }
 
-        .divider {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-            margin: 24px 0;
-            color: #9ca3af;
-            font-size: 13px;
-        }
-
-        .divider::before,
-        .divider::after {
-            content: '';
-            flex: 1;
-            height: 1px;
-            background: #e5e7eb;
-        }
-
-        .alt-btn {
-            width: 100%;
-            padding: 14px;
-            background: white;
-            border: 2px solid #e5e7eb;
-            border-radius: 12px;
-            font-size: 14px;
-            font-weight: 500;
-            color: #374151;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            text-decoration: none;
+        .login-link {
             text-align: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
+            margin-top: 20px;
+            font-size: 13px;
+            color: rgba(255,255,255,0.7);
         }
 
-        .alt-btn:hover {
-            border-color: #ec4899;
-            color: #ec4899;
-            background: #fdf2f8;
+        .login-link a {
+            color: white;
+            font-weight: 500;
+            text-decoration: none;
+        }
+
+        .login-link a:hover {
+            text-decoration: underline;
         }
 
         .alert {
-            padding: 12px 16px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-            font-size: 14px;
+            padding: 10px 14px;
+            border-radius: 8px;
+            margin-bottom: 16px;
+            font-size: 13px;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
         }
 
         .alert-error {
-            background: #fee2e2;
+            background: rgba(254, 226, 226, 0.95);
             color: #991b1b;
             border: 1px solid #fca5a5;
         }
 
         .alert-success {
-            background: #dcfce7;
+            background: rgba(220, 252, 231, 0.95);
             color: #166534;
             border: 1px solid #86efac;
         }
 
         .info-box {
-            background: #fff7ed;
-            border: 1px solid #fed7aa;
+            background: rgba(255, 247, 237, 0.95);
+            border: 1px solid rgba(254, 215, 170, 0.5);
             border-radius: 12px;
-            padding: 16px;
-            margin-bottom: 24px;
+            padding: 14px;
+            margin-bottom: 20px;
         }
 
         .info-box-title {
-            font-size: 14px;
+            font-size: 13px;
             font-weight: 600;
             color: #c2410c;
             margin-bottom: 8px;
