@@ -4,7 +4,7 @@
 <div class="module-header">
     <div class="header-info">
         <h3>Services</h3>
-        <p>Manage services offered by Malkia Konnect.</p>
+        <p>Manage services offered by Mamacare AI.</p>
     </div>
     <div class="header-actions">
         <button class="btn-primary" onclick="document.getElementById('addServiceModal').style.display='flex'">Add Service</button>

@@ -34,7 +34,7 @@
         </div>
         <div class="chat-messages">
             <div class="msg-received">
-                <p>Hello! The new campaign for "Malkia Konnect" is ready to launch.</p>
+                <p>Hello! The new campaign for "Mamacare AI" is ready to launch.</p>
                 <span class="msg-time">10:40 AM</span>
             </div>
             <div class="msg-sent">

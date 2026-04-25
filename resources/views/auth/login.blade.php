@@ -64,7 +64,7 @@
                         </div>
                     @endif
 
-                    <div class="auth-footer">© {{ date('Y') }} Malkia Konnect LTD. All Rights Reserved.</div>
+                    <div class="auth-footer">© {{ date('Y') }} Mamacare AI. All Rights Reserved.</div>
                 </form>
             </div>
         </div>

@@ -108,7 +108,7 @@
     </div>
 
     <div class="header">
-        <img src="{{ asset('LOGO-MALKIA-KONNECT-removebg-preview.png') }}" class="logo" alt="Malkia Konnect">
+        <img src="{{ asset('LOGO-MALKIA-KONNECT-removebg-preview.png') }}" class="logo" alt="Mamacare AI">
         <div class="report-title">
             <h1>Mothers Database Report</h1>
             <p>Generated on: {{ now()->format('M d, Y H:i') }}</p>
@@ -156,7 +156,7 @@
     </table>
 
     <div class="footer">
-        &copy; {{ date('Y') }} Malkia Konnect. All rights reserved. | Confidential Report
+        &copy; {{ date('Y') }} Mamacare AI. All rights reserved. | Confidential Report
     </div>
 
     <script>

@@ -17,7 +17,7 @@
 <div class="content-card" style="padding:16px;">
     <div style="display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap;">
         <div>
-            <div style="font-weight:800; font-size:16px;">Malkia Konnect</div>
+            <div style="font-weight:800; font-size:16px;">Mamacare AI</div>
             <div style="color:#6b7280; font-size:12px;">Receipt / Voucher Preview</div>
         </div>
         <div style="text-align:right;">

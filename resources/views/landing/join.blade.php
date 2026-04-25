@@ -29,7 +29,7 @@
                    data-sw="Huhitaji kutembea safari hii peke yako, Mama." 
                    data-en="You don't have to walk this journey alone, Mama.">Huhitaji kutembea safari hii peke yako, Mama.</p>
                 <p class="join-welcome-text" 
-                   data-sw="Kila mama anastahili mtu wa kumwambia 'utakuwa sawa.' Malkia Konnect ni rafiki yako ya uzazi, moja kwa moja kwenye WhatsApp yako. Bure. Binafsi. Kwa ajili yako." 
+                   data-sw="Kila mama anastahili mtu wa kumwambia 'utakuwa sawa.' Mamacare AI ni rafiki yako ya uzazi, moja kwa moja kwenye WhatsApp yako. Bure. Binafsi. Kwa ajili yako." 
                    data-en="Every mother deserves someone to tell her 'it will be okay.' Mamacare AI is your motherhood friend, right on your WhatsApp. Free. Private. For you.">
                     Kila mama anastahili mtu wa kumwambia "utakuwa sawa." Mamacare AI ni rafiki yako ya uzazi, moja kwa moja kwenye WhatsApp yako. Bure. Binafsi. Kwa ajili yako.
                 </p>
@@ -255,7 +255,7 @@
                                     <input type="checkbox" required>
                                     <span class="checkmark"></span>
                                     <span class="check-text" 
-                                          data-sw="Nakubali kupokea ujumbe na ushauri wa uzazi kutoka Malkia Konnect kupitia WhatsApp yangu." 
+                                          data-sw="Nakubali kupokea ujumbe na ushauri wa uzazi kutoka Mamacare AI kupitia WhatsApp yangu." 
                                           data-en="I agree to receive messages and motherhood advice from Mamacare AI through my WhatsApp.">Nakubali kupokea ujumbe na ushauri wa uzazi kutoka Mamacare AI kupitia WhatsApp yangu.</span>
                                 </label>
                             </div>

@@ -15,7 +15,7 @@
 </div>
 
 @php
-    $siteName = \App\Models\SystemSetting::query()->where('key', 'site.name')->value('value') ?: 'Malkia Konnect';
+    $siteName = \App\Models\SystemSetting::query()->where('key', 'site.name')->value('value') ?: 'Mamacare AI';
     $tin = \App\Models\SystemSetting::query()->where('key', 'company.tin')->value('value') ?: 'N/A';
     $vrn = \App\Models\SystemSetting::query()->where('key', 'company.vrn')->value('value') ?: 'N/A';
     $companyPhone = \App\Models\SystemSetting::query()->where('key', 'company.phone')->value('value') ?: 'N/A';

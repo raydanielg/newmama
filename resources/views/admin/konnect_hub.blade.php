@@ -6,7 +6,7 @@
 <div class="module-header">
     <div class="header-info">
         <h3>Konnect Hub</h3>
-        <p>Centralized monitoring and management for Malkia Konnect operations.</p>
+        <p>Centralized monitoring and management for Mamacare AI operations.</p>
     </div>
 </div>
 
