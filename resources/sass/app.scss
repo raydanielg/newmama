@@ -1946,6 +1946,37 @@
     margin-bottom: 60px;
 }
 
+.join-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.join-signin-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #ec4899 0%, #be185d 100%);
+    color: white;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(236, 72, 153, 0.3);
+}
+
+.join-signin-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(236, 72, 153, 0.4);
+    color: white;
+}
+
+.join-signin-btn i {
+    font-size: 16px;
+}
+
 .join-brand {
     display: flex;
     align-items: center;
