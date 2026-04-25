@@ -347,7 +347,7 @@
     <header class="simple-header">
         <div class="container">
             <div class="header-content">
-                <img src="/LOGO-MALKIA-KONNECT-removebg-preview.png" alt="Mamacare AI" class="header-logo">
+                <img src="/meetup_3669956.png" alt="Mamacare AI" class="header-logo">
                 <h1 class="header-title">Mamacare AI</h1>
             </div>
         </div>
