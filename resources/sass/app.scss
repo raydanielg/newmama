@@ -13,9 +13,9 @@
     align-items: center;
     justify-content: center;
     padding: 24px;
-    background: radial-gradient(1000px 600px at 30% 30%, rgba(43, 80, 60, 0.14), transparent 70%),
-        radial-gradient(900px 500px at 70% 60%, rgba(120, 80, 40, 0.16), transparent 65%),
-        #e9e6df;
+    background: radial-gradient(1000px 600px at 30% 30%, rgba(30, 58, 138, 0.15), transparent 70%),
+        radial-gradient(900px 500px at 70% 60%, rgba(59, 130, 246, 0.12), transparent 65%),
+        #f0f4ff;
     position: relative;
     overflow: hidden;
 }
@@ -41,24 +41,24 @@
 }
 
 .thanks-card {
-    background: rgba(216, 216, 210, 0.92);
+    background: rgba(255, 255, 255, 0.95);
     border-radius: 22px;
     padding: 44px;
     max-width: 580px;
     margin: 44px auto;
     text-align: center;
-    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.12);
-    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 18px 45px rgba(30, 58, 138, 0.12);
+    border: 1px solid rgba(59, 130, 246, 0.15);
 
     .mk-number-badge {
         display: inline-flex;
         flex-direction: column;
         align-items: center;
-        background: linear-gradient(135deg, #4c1d95 0%, #6d28d9 100%);
+        background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
         padding: 16px 32px;
         border-radius: 16px;
         color: #fff;
-        box-shadow: 0 8px 20px rgba(76, 29, 149, 0.25);
+        box-shadow: 0 8px 20px rgba(30, 58, 138, 0.25);
         margin-bottom: 24px;
 
         .label {
@@ -79,7 +79,7 @@
 }
 
 .auth-left {
-    background: linear-gradient(135deg, #5b3a22 0%, #6a4428 45%, #4a2c18 100%);
+    background: linear-gradient(135deg, #1e40af 0%, #2563eb 45%, #1d4ed8 100%);
     color: #fff;
     display: flex;
     align-items: center;
@@ -88,7 +88,7 @@
     border-radius: 16px;
     width: 62%;
     min-height: 360px;
-    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.18);
+    box-shadow: 0 18px 45px rgba(30, 58, 138, 0.25);
 }
 
 .auth-left-inner {
@@ -123,14 +123,14 @@
 }
 
 .auth-right {
-    background: rgba(216, 216, 210, 0.92);
+    background: rgba(255, 255, 255, 0.95);
     padding: 18px 22px 22px;
     border-radius: 16px;
     width: 38%;
     min-width: 360px;
     max-width: 420px;
     margin-left: -64px;
-    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.16);
+    box-shadow: 0 18px 45px rgba(30, 58, 138, 0.15);
     backdrop-filter: blur(10px);
     z-index: 2;
 }
@@ -2227,6 +2227,17 @@
 
     .brand-konnect {
         font-size: 13px;
+    }
+
+    .join-header-actions {
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+    }
+
+    .join-signin-btn {
+        justify-content: center;
+        width: 100%;
     }
 
     .join-lang {
