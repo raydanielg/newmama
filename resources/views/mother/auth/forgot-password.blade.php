@@ -29,102 +29,68 @@
             max-width: 340px;
         }
 
-        .forgot-card {
-            background: white;
-            border-radius: 24px;
-            padding: 40px;
-            box-shadow: 0 25px 50px -12px rgba(30, 64, 175, 0.25);
-        }
-
         .forgot-header {
             text-align: center;
-            margin-bottom: 32px;
-        }
-
-        .logo-section {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-            margin-bottom: 24px;
-        }
-
-        .logo-section {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
             margin-bottom: 24px;
         }
 
         .logo-img {
-            width: 120px;
+            width: 80px;
             height: auto;
-            max-height: 120px;
-            object-fit: contain;
-        }
-
-        .logo-text {
-            font-size: 24px;
-            font-weight: 700;
-            color: #1e40af;
-            text-align: center;
+            margin: 0 auto 20px;
+            display: block;
+            filter: drop-shadow(0 10px 30px rgba(0,0,0,0.2));
         }
 
         .welcome-title {
-            font-size: 24px;
-            font-weight: 700;
-            color: #1f2937;
-            margin-bottom: 8px;
+            font-size: 26px;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 6px;
+            text-align: center;
         }
 
         .welcome-subtitle {
-            font-size: 14px;
-            color: #6b7280;
+            font-size: 13px;
+            color: rgba(255,255,255,0.8);
+            text-align: center;
+            margin-bottom: 28px;
         }
 
         .form-group {
-            margin-bottom: 20px;
+            margin-bottom: 16px;
         }
 
         .form-label {
             display: block;
-            font-size: 14px;
+            font-size: 12px;
             font-weight: 500;
-            color: #374151;
-            margin-bottom: 8px;
-        }
-
-        .input-wrapper {
-            position: relative;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
         .form-input {
             width: 100%;
-            padding: 14px 16px 14px 48px;
-            border: 2px solid #e5e7eb;
+            padding: 14px 16px;
+            border: none;
             border-radius: 12px;
             font-size: 15px;
             font-family: inherit;
             transition: all 0.2s ease;
-            background: #f9fafb;
+            background: rgba(255,255,255,0.95);
+            color: #1f2937;
         }
 
         .form-input:focus {
             outline: none;
-            border-color: #ec4899;
             background: white;
-            box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.1);
+            box-shadow: 0 0 0 3px rgba(255,255,255,0.3);
         }
 
-        .input-icon {
-            position: absolute;
-            left: 16px;
-            top: 50%;
-            transform: translateY(-50%);
+        .form-input::placeholder {
             color: #9ca3af;
-            font-size: 18px;
         }
 
         .submit-btn {
