@@ -6,7 +6,7 @@
             <p class="landing-hero-subtitle">Mamacare AI brings trusted maternal care guidance, community, and products together — with AI-powered support delivered directly on WhatsApp.</p>
 
             <div class="landing-hero-actions">
-                <a class="landing-btn" href="{{ route('join') }}">Join Now</a>
+                <a class="landing-btn" href="{{ route('mother.login') }}">Mama Login</a>
                 <a class="landing-btn landing-btn-ghost landing-btn-shop" href="#">Shop Now</a>
             </div>
         </div>

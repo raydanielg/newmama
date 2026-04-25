@@ -27,7 +27,7 @@
                     <li><a href="{{ route('about') }}">About Us</a></li>
                     <li><a href="#">Our Services</a></li>
                     <li><a href="#">Mamacare Shop</a></li>
-                    <li><a href="{{ route('join') }}">Join Now</a></li>
+                    <li><a href="{{ route('mother.login') }}">Mama Login</a></li>
                 </ul>
             </div>
 
