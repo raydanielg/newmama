@@ -251,13 +251,9 @@
                 </button>
             </form>
 
-            <div class="divider">AU</div>
-
-            <a href="{{ route('mother.login') }}" class="alt-btn">
-                <i class="fas fa-sign-in-alt"></i>
-                <span>UNA AKAUNTI? INGIA</span>
-            </a>
-        </div>
+            <div class="login-link">
+                Already have an account? <a href="{{ route('mother.login') }}">Log in</a>
+            </div>
     </div>
 </body>
 </html>
