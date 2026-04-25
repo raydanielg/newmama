@@ -26,7 +26,7 @@
 
         .login-container {
             width: 100%;
-            max-width: 360px;
+            max-width: 340px;
         }
 
         .login-header {
@@ -34,38 +34,31 @@
             margin-bottom: 32px;
         }
 
-        .logo {
-            width: 64px;
-            height: 64px;
-            background: white;
-            border-radius: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 32px;
-            font-size: 32px;
-            color: #1e40af;
-            font-weight: 700;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        .logo-img {
+            width: 80px;
+            height: auto;
+            margin: 0 auto 20px;
+            display: block;
+            filter: drop-shadow(0 10px 30px rgba(0,0,0,0.2));
         }
 
         .welcome-title {
-            font-size: 28px;
+            font-size: 26px;
             font-weight: 600;
             color: white;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
             text-align: center;
         }
 
         .welcome-subtitle {
-            font-size: 14px;
+            font-size: 13px;
             color: rgba(255,255,255,0.8);
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 28px;
         }
 
         .form-group {
-            margin-bottom: 20px;
+            margin-bottom: 16px;
         }
 
         .form-label {
@@ -119,27 +112,27 @@
 
         .login-btn {
             width: 100%;
-            padding: 14px;
-            background: #1e1e1e;
+            padding: 12px;
+            background: #111;
             color: white;
             border: none;
-            border-radius: 12px;
-            font-size: 15px;
+            border-radius: 10px;
+            font-size: 14px;
             font-weight: 500;
             cursor: pointer;
             transition: all 0.2s ease;
-            margin-top: 24px;
+            margin-top: 20px;
         }
 
         .login-btn:hover {
             background: #000;
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
         }
 
         .signup-link {
             text-align: center;
-            margin-top: 24px;
+            margin-top: 20px;
             font-size: 13px;
             color: rgba(255,255,255,0.7);
         }
@@ -155,9 +148,9 @@
         }
 
         .alert {
-            padding: 12px 16px;
+            padding: 10px 14px;
             border-radius: 8px;
-            margin-bottom: 20px;
+            margin-bottom: 16px;
             font-size: 13px;
             display: flex;
             align-items: center;
@@ -184,7 +177,7 @@
 
         .forgot-link {
             text-align: center;
-            margin-top: 16px;
+            margin-top: 14px;
             font-size: 13px;
         }
 
@@ -211,8 +204,8 @@
 </head>
 <body>
     <div class="login-container">
-        <div class="login-header">
-                <div class="logo">M</div>
+            <div class="login-header">
+                <img src="{{ asset('meetup_3669956.png') }}" alt="Mamacare AI" class="logo-img">
                 <h1 class="welcome-title">Welcome back</h1>
                 <p class="welcome-subtitle">Log in to Mamacare AI</p>
             </div>
