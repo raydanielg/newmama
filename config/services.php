@@ -35,4 +35,13 @@ return [
         ],
     ],
 
+    'whatsapp' => [
+        'bot_url' => env('WHATSAPP_BOT_URL', 'http://localhost:3000'),
+        'api_key' => env('WHATSAPP_API_KEY', ''),
+        'timeout' => env('WHATSAPP_TIMEOUT', 30),
+        'default_delay' => env('WHATSAPP_DEFAULT_DELAY', 3000),
+        'max_retries' => env('WHATSAPP_MAX_RETRIES', 3),
+        'enabled' => env('WHATSAPP_ENABLED', true),
+    ],
+
 ];
