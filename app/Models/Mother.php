@@ -19,7 +19,7 @@ class Mother extends Model
         'new_parent' => 'blue',
         'trying' => 'purple',
     ];
-{
+
     protected $fillable = [
         'mk_number',
         'full_name',
