@@ -85,6 +85,14 @@ Route::group(['prefix' => 'mother', 'as' => 'mother.'], function () {
     Route::post('/forgot-password', [App\Http\Controllers\MotherAuthController::class, 'forgotPassword']);
 });
 
+// Social Authentication Routes
+Route::group(['prefix' => 'auth', 'as' => 'auth.'], function () {
+    Route::get('/google', [App\Http\Controllers\MotherAuthController::class, 'redirectToGoogle'])->name('google');
+    Route::get('/google/callback', [App\Http\Controllers\MotherAuthController::class, 'handleGoogleCallback'])->name('google.callback');
+    Route::get('/apple', [App\Http\Controllers\MotherAuthController::class, 'redirectToApple'])->name('apple');
+    Route::get('/apple/callback', [App\Http\Controllers\MotherAuthController::class, 'handleAppleCallback'])->name('apple.callback');
+});
+
 // Mother Dashboard Routes (Protected)
 Route::group(['prefix' => 'mother', 'middleware' => ['auth'], 'as' => 'mother.'], function () {
     Route::post('/logout', [App\Http\Controllers\MotherAuthController::class, 'logout'])->name('logout');
