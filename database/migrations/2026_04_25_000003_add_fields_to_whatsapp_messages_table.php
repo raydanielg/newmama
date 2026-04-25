@@ -40,9 +40,36 @@ return new class extends Migration
     public function down(): void
     {
         Schema::table('whatsapp_messages', function (Blueprint $table) {
-            $table->dropIndex(['to_number', 'status']);
-            $table->dropIndex(['type', 'status']);
-            $table->dropColumn(['type', 'status', 'external_id', 'metadata', 'response_data', 'delivered_at', 'read_at']);
+            // Only drop columns that exist
+            $columnsToDrop = [];
+            if (Schema::hasColumn('whatsapp_messages', 'to_number')) {
+                $columnsToDrop[] = 'to_number';
+            }
+            if (Schema::hasColumn('whatsapp_messages', 'message')) {
+                $columnsToDrop[] = 'message';
+            }
+            if (Schema::hasColumn('whatsapp_messages', 'status')) {
+                $columnsToDrop[] = 'status';
+            }
+            if (Schema::hasColumn('whatsapp_messages', 'external_id')) {
+                $columnsToDrop[] = 'external_id';
+            }
+            if (Schema::hasColumn('whatsapp_messages', 'metadata')) {
+                $columnsToDrop[] = 'metadata';
+            }
+            if (Schema::hasColumn('whatsapp_messages', 'response_data')) {
+                $columnsToDrop[] = 'response_data';
+            }
+            if (Schema::hasColumn('whatsapp_messages', 'delivered_at')) {
+                $columnsToDrop[] = 'delivered_at';
+            }
+            if (Schema::hasColumn('whatsapp_messages', 'read_at')) {
+                $columnsToDrop[] = 'read_at';
+            }
+            
+            if (!empty($columnsToDrop)) {
+                $table->dropColumn($columnsToDrop);
+            }
         });
     }
 };
