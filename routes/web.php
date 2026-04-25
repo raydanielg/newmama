@@ -68,6 +68,13 @@ Route::get('/api/regions/{region}/districts', function ($regionId) {
 
 Route::get('/api/mothers/approved', [App\Http\Controllers\Api\MotherIntakeController::class, 'approved'])->name('api.mothers.approved');
 
+// WhatsApp Webhook Routes
+Route::group(['prefix' => 'api/webhooks', 'as' => 'webhooks.'], function () {
+    Route::post('/whatsapp-status', [App\Http\Controllers\Api\WhatsappWebhookController::class, 'handleStatus'])->name('whatsapp-status');
+    Route::post('/whatsapp-incoming', [App\Http\Controllers\Api\WhatsappWebhookController::class, 'handleIncoming'])->name('whatsapp-incoming');
+    Route::get('/whatsapp-stats', [App\Http\Controllers\Api\WhatsappWebhookController::class, 'stats'])->name('whatsapp-stats');
+});
+
 // Mother Authentication Routes (Public)
 Route::group(['prefix' => 'mother', 'as' => 'mother.'], function () {
     Route::get('/login', [App\Http\Controllers\MotherAuthController::class, 'showLoginForm'])->name('login');
