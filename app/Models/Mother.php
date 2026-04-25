@@ -117,4 +117,89 @@ class Mother extends Model
     {
         return $this->hasMany(WhatsappMessage::class);
     }
+
+    public function appointments(): HasMany
+    {
+        return $this->hasMany(MotherAppointment::class);
+    }
+
+    public function weightLogs(): HasMany
+    {
+        return $this->hasMany(MotherWeightLog::class);
+    }
+
+    public function kickCounts(): HasMany
+    {
+        return $this->hasMany(MotherKickCount::class);
+    }
+
+    public function bloodPressures(): HasMany
+    {
+        return $this->hasMany(MotherBloodPressure::class);
+    }
+
+    public function healthAlerts(): HasMany
+    {
+        return $this->hasMany(MotherHealthAlert::class);
+    }
+
+    public function checklistItems(): HasMany
+    {
+        return $this->hasMany(MotherChecklistItem::class);
+    }
+
+    public function dailyLogs(): HasMany
+    {
+        return $this->hasMany(MotherDailyLog::class);
+    }
+
+    public function scopeApproved($query)
+    {
+        return $query->where('is_approved', true);
+    }
+
+    public function getLatestWeightAttribute(): ?MotherWeightLog
+    {
+        return $this->weightLogs()->recent()->first();
+    }
+
+    public function getLatestBloodPressureAttribute(): ?MotherBloodPressure
+    {
+        return $this->bloodPressures()->recent()->first();
+    }
+
+    public function getUpcomingAppointmentsAttribute()
+    {
+        return $this->appointments()->upcoming()->get();
+    }
+
+    public function getPendingChecklistItemsAttribute()
+    {
+        return $this->checklistItems()->pending()->get();
+    }
+
+    public function getUnreadAlertsCountAttribute(): int
+    {
+        return $this->healthAlerts()->unread()->count();
+    }
+
+    public function getCriticalAlertsAttribute()
+    {
+        return $this->healthAlerts()->unresolved()->critical()->get();
+    }
+
+    public function getStatusBadgeClassAttribute(): string
+    {
+        $colors = [
+            'pregnant' => 'bg-pink-100 text-pink-800',
+            'new_parent' => 'bg-blue-100 text-blue-800',
+            'trying' => 'bg-purple-100 text-purple-800',
+        ];
+        return $colors[$this->status] ?? 'bg-gray-100 text-gray-800';
+    }
+
+    public function getStatusLabelAttribute(): string
+    {
+        return self::STATUSES[$this->status] ?? 'Unknown';
+    }
 }
