@@ -6,7 +6,7 @@
         {{-- Top Branding & Language --}}
         <div class="join-header">
             <div class="join-brand">
-                <img src="{{ asset('LOGO-MALKIA-KONNECT-removebg-preview.png') }}" alt="Mamacare AI Logo" class="join-logo">
+                <img src="{{ asset('meetup_3669956.png') }}" alt="Mamacare AI Logo" class="join-logo">
                 <div class="join-brand-text">
                     <span class="brand-malkia">Mamacare</span>
                     <span class="brand-konnect">AI</span>

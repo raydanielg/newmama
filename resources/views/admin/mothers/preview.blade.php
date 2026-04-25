@@ -108,7 +108,7 @@
     </div>
 
     <div class="header">
-        <img src="{{ asset('LOGO-MALKIA-KONNECT-removebg-preview.png') }}" class="logo" alt="Mamacare AI">
+        <img src="{{ asset('meetup_3669956.png') }}" class="logo" alt="Mamacare AI">
         <div class="report-title">
             <h1>Mothers Database Report</h1>
             <p>Generated on: {{ now()->format('M d, Y H:i') }}</p>

@@ -32,7 +32,7 @@
                         
                         <div class="article-author-info">
                             <div class="author-avatar">
-                                <img src="{{ asset('LOGO-MALKIA-KONNECT-removebg-preview.png') }}" alt="Mamacare AI">
+                                <img src="{{ asset('meetup_3669956.png') }}" alt="Mamacare AI">
                             </div>
                             <div class="author-details">
                                 <span class="author-name">Mamacare AI Team</span>

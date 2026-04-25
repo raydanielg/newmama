@@ -4,7 +4,7 @@
             $siteLogo = \App\Models\SystemSetting::query()->where('key', 'site.logo_url')->value('value');
             $siteName = \App\Models\SystemSetting::query()->where('key', 'site.name')->value('value') ?: 'Mamacare AI';
         @endphp
-        <img src="{{ $siteLogo ?: asset('LOGO-MALKIA-KONNECT-removebg-preview.png') }}" alt="Logo" class="admin-logo-img">
+        <img src="{{ $siteLogo ?: asset('meetup_3669956.png') }}" alt="Logo" class="admin-logo-img">
         <div class="brand-text">
             <span class="m-text">{{ $siteName }}</span>
             <span class="k-text">Admin Panel</span>
