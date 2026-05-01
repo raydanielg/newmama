@@ -14,24 +14,28 @@
     
     <style>
         :root {
-            --primary: #ec4899;
-            --primary-dark: #db2777;
-            --primary-light: #fce7f3;
-            --secondary: #3b82f6;
-            --success: #22c55e;
+            --primary: #4f46e5;
+            --primary-dark: #3730a3;
+            --primary-light: #eef2ff;
+            --secondary: #10b981;
+            --success: #059669;
             --warning: #f59e0b;
             --danger: #ef4444;
             --info: #06b6d4;
-            --dark: #1f2937;
-            --gray: #6b7280;
-            --light: #f3f4f6;
+            --dark: #0f172a;
+            --slate-800: #1e293b;
+            --slate-700: #334155;
+            --gray: #64748b;
+            --light: #f8fafc;
             --white: #ffffff;
             --sidebar-width: 280px;
-            --header-height: 70px;
-            --radius: 16px;
-            --radius-sm: 8px;
-            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --header-height: 80px;
+            --radius-xl: 24px;
+            --radius-lg: 16px;
+            --radius-md: 12px;
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
         }
 
         * {
@@ -41,11 +45,21 @@
         }
 
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: linear-gradient(135deg, #fef7ff 0%, #fdf2f8 50%, #fff1f2 100%);
+            font-family: 'Inter', sans-serif;
+            background-color: #fdfbf7;
+            background-image: url('{{ asset('flat-abstract-background-pattern-vector_822782-866.jpg') }}');
+            background-size: cover;
+            background-attachment: fixed;
             min-height: 100vh;
             color: var(--dark);
-            line-height: 1.6;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(135deg, rgba(248, 250, 252, 0.9) 0%, rgba(241, 245, 249, 0.9) 100%);
+            z-index: -1;
         }
 
         /* Sidebar */
@@ -55,657 +69,429 @@
             top: 0;
             width: var(--sidebar-width);
             height: 100vh;
-            background: linear-gradient(180deg, var(--white) 0%, #fdf2f8 100%);
-            border-right: 1px solid rgba(236, 72, 153, 0.1);
-            padding: 24px 20px;
+            background: var(--white);
+            border-right: 1px solid #e2e8f0;
+            padding: 32px 24px;
             overflow-y: auto;
             z-index: 1000;
             transition: transform 0.3s ease;
         }
 
         .sidebar-header {
-            text-align: center;
-            padding-bottom: 24px;
-            border-bottom: 1px solid rgba(236, 72, 153, 0.1);
+            padding-bottom: 32px;
             margin-bottom: 24px;
         }
 
         .sidebar-logo {
             display: flex;
             align-items: center;
-            justify-content: center;
             gap: 12px;
             text-decoration: none;
-            color: var(--primary-dark);
+            color: var(--dark);
         }
 
-        .sidebar-logo i {
-            font-size: 32px;
+        .sidebar-logo img {
+            height: 40px;
+            width: auto;
         }
 
         .sidebar-logo span {
-            font-size: 24px;
-            font-weight: 700;
+            font-size: 22px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
         }
 
-        .user-card {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-            border-radius: var(--radius);
-            padding: 20px;
-            color: var(--white);
-            margin-bottom: 24px;
-            box-shadow: var(--shadow-lg);
-        }
-
-        .user-name {
-            font-size: 18px;
-            font-weight: 600;
-            margin-bottom: 4px;
-        }
-
-        .user-mk {
-            font-size: 12px;
-            opacity: 0.9;
-            font-family: monospace;
-        }
-
-        .user-status {
-            display: inline-flex;
+        .user-profile-mini {
+            background: var(--light);
+            border-radius: var(--radius-lg);
+            padding: 16px;
+            margin-bottom: 32px;
+            display: flex;
             align-items: center;
-            gap: 6px;
-            background: rgba(255,255,255,0.2);
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 12px;
-            margin-top: 10px;
+            gap: 12px;
+            border: 1px solid #e2e8f0;
         }
 
-        .pregnancy-progress {
-            margin-top: 16px;
+        .user-avatar-circle {
+            width: 44px;
+            height: 44px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 18px;
         }
 
-        .progress-bar {
-            height: 8px;
-            background: rgba(255,255,255,0.3);
-            border-radius: 4px;
+        .user-info-text {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .user-info-name {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--dark);
+            white-space: nowrap;
             overflow: hidden;
+            text-overflow: ellipsis;
         }
 
-        .progress-fill {
-            height: 100%;
-            background: var(--white);
-            border-radius: 4px;
-            transition: width 0.3s ease;
-        }
-
-        .progress-text {
-            font-size: 12px;
-            margin-top: 6px;
-            opacity: 0.9;
+        .user-info-id {
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--gray);
+            text-transform: uppercase;
         }
 
         /* Navigation */
-        .nav-section {
-            margin-bottom: 8px;
-        }
-
-        .nav-section-title {
+        .nav-label {
             font-size: 11px;
-            font-weight: 600;
+            font-weight: 800;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
+            letter-spacing: 1px;
             color: var(--gray);
-            padding: 16px 12px 8px;
+            margin: 24px 0 12px 12px;
         }
 
-        .nav-item {
+        .nav-link {
             display: flex;
             align-items: center;
             gap: 12px;
             padding: 12px 16px;
-            border-radius: var(--radius-sm);
+            border-radius: var(--radius-md);
             text-decoration: none;
-            color: var(--dark);
+            color: var(--slate-700);
             font-size: 14px;
-            font-weight: 500;
+            font-weight: 600;
             transition: all 0.2s ease;
             margin-bottom: 4px;
         }
 
-        .nav-item:hover {
-            background: var(--primary-light);
-            color: var(--primary-dark);
-        }
-
-        .nav-item.active {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-            color: var(--white);
-            box-shadow: var(--shadow);
-        }
-
-        .nav-item i {
-            width: 24px;
-            text-align: center;
+        .nav-link i {
+            width: 20px;
             font-size: 16px;
+            color: var(--gray);
+            transition: all 0.2s ease;
+        }
+
+        .nav-link:hover {
+            background: var(--primary-light);
+            color: var(--primary);
+        }
+
+        .nav-link:hover i {
+            color: var(--primary);
+        }
+
+        .nav-link.active {
+            background: var(--primary);
+            color: var(--white);
+            box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
+        }
+
+        .nav-link.active i {
+            color: var(--white);
         }
 
         .nav-badge {
             margin-left: auto;
             background: var(--danger);
-            color: var(--white);
-            font-size: 11px;
-            font-weight: 600;
+            color: white;
+            font-size: 10px;
+            font-weight: 800;
             padding: 2px 8px;
-            border-radius: 10px;
+            border-radius: 20px;
         }
 
-        .nav-item.active .nav-badge {
-            background: var(--white);
-            color: var(--primary-dark);
+        .emergency-action {
+            margin-top: 40px;
+            padding: 20px;
+            background: linear-gradient(135deg, #fff1f2 0%, #fee2e2 100%);
+            border-radius: var(--radius-lg);
+            border: 1px solid #fecaca;
+            text-align: center;
         }
 
-        /* Emergency Button */
-        .emergency-btn {
+        .emergency-action h4 {
+            font-size: 13px;
+            font-weight: 800;
+            color: #991b1b;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+        }
+
+        .emergency-btn-red {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 10px;
-            width: 100%;
-            padding: 16px;
-            background: linear-gradient(135deg, var(--danger) 0%, #dc2626 100%);
-            color: var(--white);
-            border: none;
-            border-radius: var(--radius-sm);
-            font-size: 14px;
-            font-weight: 600;
-            cursor: pointer;
+            gap: 8px;
+            background: var(--danger);
+            color: white;
+            padding: 12px;
+            border-radius: var(--radius-md);
             text-decoration: none;
+            font-size: 13px;
+            font-weight: 700;
+            box-shadow: 0 4px 12px rgba(239, 68, 68, 0.2);
             transition: all 0.2s ease;
-            margin-top: 16px;
-            box-shadow: var(--shadow);
         }
 
-        .emergency-btn:hover {
+        .emergency-btn-red:hover {
+            background: #dc2626;
             transform: translateY(-2px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .emergency-btn i {
-            font-size: 18px;
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.1); }
         }
 
         /* Main Content */
-        .main-content {
+        .main-wrapper {
             margin-left: var(--sidebar-width);
-            padding: 24px 32px;
+            padding: 40px;
             min-height: 100vh;
         }
 
-        /* Header */
-        .header {
+        .top-navbar {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            margin-bottom: 28px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid rgba(236, 72, 153, 0.1);
+            margin-bottom: 40px;
         }
 
-        .page-title {
+        .welcome-greeting h1 {
             font-size: 28px;
-            font-weight: 700;
+            font-weight: 900;
             color: var(--dark);
-            display: flex;
-            align-items: center;
-            gap: 12px;
+            letter-spacing: -1px;
         }
 
-        .page-title i {
-            color: var(--primary);
-        }
-
-        .header-actions {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 10px 20px;
-            border-radius: var(--radius-sm);
+        .welcome-greeting p {
             font-size: 14px;
+            color: var(--gray);
             font-weight: 500;
-            text-decoration: none;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            border: none;
         }
 
-        .btn-primary {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-            color: var(--white);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .btn-secondary {
-            background: var(--white);
-            color: var(--dark);
-            border: 1px solid rgba(0,0,0,0.1);
-        }
-
-        .btn-secondary:hover {
-            background: var(--light);
-        }
-
-        /* Cards */
-        .card {
-            background: var(--white);
-            border-radius: var(--radius);
-            padding: 24px;
-            box-shadow: var(--shadow);
-            border: 1px solid rgba(236, 72, 153, 0.08);
-        }
-
-        .card-header {
+        .top-nav-actions {
             display: flex;
             align-items: center;
-            justify-content: space-between;
-            margin-bottom: 20px;
+            gap: 16px;
         }
 
-        .card-title {
-            font-size: 18px;
-            font-weight: 600;
-            color: var(--dark);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .card-title i {
-            color: var(--primary);
-        }
-
-        /* Grid */
-        .grid {
-            display: grid;
-            gap: 20px;
-        }
-
-        .grid-2 { grid-template-columns: repeat(2, 1fr); }
-        .grid-3 { grid-template-columns: repeat(3, 1fr); }
-        .grid-4 { grid-template-columns: repeat(4, 1fr); }
-
-        /* KPI Cards */
-        .kpi-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 20px;
-            margin-bottom: 28px;
-        }
-
-        .kpi-card {
-            background: var(--white);
-            border-radius: var(--radius);
-            padding: 24px;
-            box-shadow: var(--shadow);
-            border: 1px solid rgba(236, 72, 153, 0.08);
-            transition: all 0.2s ease;
-        }
-
-        .kpi-card:hover {
-            transform: translateY(-4px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .kpi-header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 16px;
-        }
-
-        .kpi-icon {
-            width: 48px;
-            height: 48px;
-            border-radius: 12px;
+        .action-icon-btn {
+            width: 44px;
+            height: 44px;
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: var(--radius-md);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 20px;
+            color: var(--slate-700);
+            text-decoration: none;
+            position: relative;
+            transition: all 0.2s ease;
         }
 
-        .kpi-icon.pink { background: var(--primary-light); color: var(--primary); }
-        .kpi-icon.blue { background: #dbeafe; color: var(--secondary); }
-        .kpi-icon.green { background: #dcfce7; color: var(--success); }
-        .kpi-icon.orange { background: #ffedd5; color: var(--warning); }
-        .kpi-icon.red { background: #fee2e2; color: var(--danger); }
-
-        .kpi-trend {
-            font-size: 12px;
-            font-weight: 600;
-            padding: 4px 8px;
-            border-radius: 6px;
-        }
-
-        .kpi-trend.up { background: #dcfce7; color: var(--success); }
-        .kpi-trend.down { background: #fee2e2; color: var(--danger); }
-
-        .kpi-value {
-            font-size: 32px;
-            font-weight: 700;
-            color: var(--dark);
-            margin-bottom: 4px;
-        }
-
-        .kpi-label {
-            font-size: 14px;
-            color: var(--gray);
-        }
-
-        /* Alerts */
-        .alert {
-            padding: 16px 20px;
-            border-radius: var(--radius-sm);
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .alert-success {
-            background: #dcfce7;
-            color: #166534;
-            border-left: 4px solid var(--success);
-        }
-
-        .alert-error {
-            background: #fee2e2;
-            color: #991b1b;
-            border-left: 4px solid var(--danger);
-        }
-
-        .alert-warning {
-            background: #ffedd5;
-            color: #92400e;
-            border-left: 4px solid var(--warning);
-        }
-
-        /* Tables */
-        .table-container {
-            overflow-x: auto;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        th, td {
-            padding: 12px 16px;
-            text-align: left;
-            font-size: 14px;
-        }
-
-        th {
-            font-weight: 600;
-            color: var(--gray);
-            border-bottom: 2px solid rgba(0,0,0,0.05);
-            text-transform: uppercase;
-            font-size: 12px;
-            letter-spacing: 0.5px;
-        }
-
-        td {
-            border-bottom: 1px solid rgba(0,0,0,0.05);
-        }
-
-        tr:hover td {
+        .action-icon-btn:hover {
             background: var(--light);
+            border-color: var(--primary);
+            color: var(--primary);
         }
 
-        /* Badges */
-        .badge {
+        .notification-dot {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 8px;
+            height: 8px;
+            background: var(--danger);
+            border: 2px solid white;
+            border-radius: 50%;
+        }
+
+        /* Generic Components */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-radius: var(--radius-xl);
+            padding: 32px;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-modern {
+            padding: 12px 24px;
+            border-radius: var(--radius-md);
+            font-weight: 700;
+            font-size: 14px;
+            text-decoration: none;
+            transition: all 0.2s ease;
             display: inline-flex;
             align-items: center;
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: 500;
-        }
-
-        .badge-pink { background: var(--primary-light); color: var(--primary-dark); }
-        .badge-blue { background: #dbeafe; color: #1e40af; }
-        .badge-green { background: #dcfce7; color: #166534; }
-        .badge-orange { background: #ffedd5; color: #92400e; }
-        .badge-red { background: #fee2e2; color: #991b1b; }
-        .badge-gray { background: #f3f4f6; color: #6b7280; }
-
-        /* Forms */
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-label {
-            display: block;
-            font-size: 14px;
-            font-weight: 500;
-            margin-bottom: 8px;
-            color: var(--dark);
-        }
-
-        .form-input {
-            width: 100%;
-            padding: 12px 16px;
-            border: 1px solid rgba(0,0,0,0.1);
-            border-radius: var(--radius-sm);
-            font-size: 14px;
-            transition: all 0.2s ease;
-            font-family: inherit;
-        }
-
-        .form-input:focus {
-            outline: none;
-            border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.1);
-        }
-
-        /* Mobile Menu Toggle */
-        .menu-toggle {
-            display: none;
-            position: fixed;
-            top: 20px;
-            left: 20px;
-            z-index: 1001;
-            background: var(--primary);
-            color: var(--white);
+            gap: 8px;
             border: none;
+            cursor: pointer;
+        }
+
+        .btn-modern-primary {
+            background: var(--primary);
+            color: white;
+            box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
+        }
+
+        .btn-modern-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+
+        @media (max-width: 1024px) {
+            .sidebar { transform: translateX(-100%); }
+            .sidebar.open { transform: translateX(0); }
+            .main-wrapper { margin-left: 0; padding: 24px; }
+            .menu-toggle-btn { display: flex !important; }
+        }
+
+        .menu-toggle-btn {
+            display: none;
             width: 44px;
             height: 44px;
-            border-radius: 50%;
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: var(--radius-md);
+            align-items: center;
+            justify-content: center;
             cursor: pointer;
-            font-size: 18px;
-        }
-
-        /* Responsive */
-        @media (max-width: 1024px) {
-            .grid-4 { grid-template-columns: repeat(2, 1fr); }
-        }
-
-        @media (max-width: 768px) {
-            :root {
-                --sidebar-width: 100%;
-            }
-
-            .sidebar {
-                transform: translateX(-100%);
-            }
-
-            .sidebar.open {
-                transform: translateX(0);
-            }
-
-            .main-content {
-                margin-left: 0;
-                padding: 80px 16px 24px;
-            }
-
-            .menu-toggle {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-
-            .grid-2, .grid-3, .grid-4 {
-                grid-template-columns: 1fr;
-            }
-
-            .header {
-                flex-direction: column;
-                gap: 16px;
-                align-items: flex-start;
-            }
-        }
-
-        /* Animations */
-        .animate-fade-in {
-            animation: fadeIn 0.5s ease;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
         }
     </style>
-    
     @stack('styles')
 </head>
 <body>
-    <button class="menu-toggle" onclick="toggleSidebar()">
-        <i class="fas fa-bars"></i>
-    </button>
-
     <aside class="sidebar" id="sidebar">
         <div class="sidebar-header">
             <a href="{{ route('mother.dashboard') }}" class="sidebar-logo">
-                <i class="fas fa-heart-pulse"></i>
+                <img src="{{ asset('logo.svg') }}" alt="Logo">
                 <span>MamaCare</span>
             </a>
         </div>
 
         @if(isset($mother))
-        <div class="user-card">
-            <div class="user-name">{{ $mother->full_name }}</div>
-            <div class="user-mk">{{ $mother->mk_number }}</div>
-            <div class="user-status">
-                <i class="fas fa-circle" style="font-size: 8px;"></i>
-                {{ $mother->status_label }}
+        <div class="user-profile-mini">
+            <div class="user-avatar-circle">
+                {{ substr($mother->full_name, 0, 1) }}
             </div>
-            @if($mother->status === 'pregnant' && $mother->weeks_pregnant)
-            <div class="pregnancy-progress">
-                <div class="progress-bar">
-                    <div class="progress-fill" style="width: {{ min(100, ($mother->weeks_pregnant / 40) * 100) }}%"></div>
-                </div>
-                <div class="progress-text">Week {{ $mother->weeks_pregnant }} of 40</div>
+            <div class="user-info-text">
+                <div class="user-info-name">{{ $mother->full_name }}</div>
+                <div class="user-info-id">{{ $mother->mk_number }}</div>
             </div>
-            @endif
         </div>
         @endif
 
         <nav>
-            <div class="nav-section">
-                <div class="nav-section-title">Main</div>
-                <a href="{{ route('mother.dashboard') }}" class="nav-item {{ request()->routeIs('mother.dashboard') ? 'active' : '' }}">
-                    <i class="fas fa-home"></i>
-                    <span>Dashboard</span>
-                </a>
-                <a href="{{ route('mother.profile') }}" class="nav-item {{ request()->routeIs('mother.profile') ? 'active' : '' }}">
-                    <i class="fas fa-user"></i>
-                    <span>My Profile</span>
-                </a>
-            </div>
+            <div class="nav-label">Core Portal</div>
+            <a href="{{ route('mother.dashboard') }}" class="nav-link {{ request()->routeIs('mother.dashboard') ? 'active' : '' }}">
+                <i class="fas fa-grid-2"></i>
+                <span>Portal Home</span>
+            </a>
+            <a href="{{ route('mother.profile') }}" class="nav-link {{ request()->routeIs('mother.profile') ? 'active' : '' }}">
+                <i class="fas fa-user-circle"></i>
+                <span>My Profile</span>
+            </a>
 
-            <div class="nav-section">
-                <div class="nav-section-title">Health Tracking</div>
-                <a href="{{ route('mother.appointments') }}" class="nav-item {{ request()->routeIs('mother.appointments*') ? 'active' : '' }}">
-                    <i class="fas fa-calendar-check"></i>
-                    <span>Appointments</span>
-                    @if(isset($mother) && $mother->upcoming_appointments->count() > 0)
-                        <span class="nav-badge">{{ $mother->upcoming_appointments->count() }}</span>
-                    @endif
-                </a>
-                <a href="{{ route('mother.health-data') }}" class="nav-item {{ request()->routeIs('mother.health-data*') ? 'active' : '' }}">
-                    <i class="fas fa-heartbeat"></i>
-                    <span>Health Data</span>
-                </a>
-                <a href="{{ route('mother.daily-log') }}" class="nav-item {{ request()->routeIs('mother.daily-log*') ? 'active' : '' }}">
-                    <i class="fas fa-clipboard-list"></i>
-                    <span>Daily Log</span>
-                </a>
-                <a href="{{ route('mother.checklist') }}" class="nav-item {{ request()->routeIs('mother.checklist*') ? 'active' : '' }}">
-                    <i class="fas fa-tasks"></i>
-                    <span>Checklist</span>
-                </a>
-            </div>
+            <div class="nav-label">Care Journey</div>
+            <a href="{{ route('mother.appointments') }}" class="nav-link {{ request()->routeIs('mother.appointments*') ? 'active' : '' }}">
+                <i class="fas fa-calendar-heart"></i>
+                <span>Appointments</span>
+                @if(isset($mother) && $mother->upcoming_appointments->count() > 0)
+                    <span class="nav-badge">{{ $mother->upcoming_appointments->count() }}</span>
+                @endif
+            </a>
+            <a href="{{ route('mother.health-data') }}" class="nav-link {{ request()->routeIs('mother.health-data*') ? 'active' : '' }}">
+                <i class="fas fa-chart-medical"></i>
+                <span>Health Monitoring</span>
+            </a>
+            <a href="{{ route('mother.daily-log') }}" class="nav-link {{ request()->routeIs('mother.daily-log*') ? 'active' : '' }}">
+                <i class="fas fa-notes-medical"></i>
+                <span>Daily Log</span>
+            </a>
+            <a href="{{ route('mother.checklist') }}" class="nav-link {{ request()->routeIs('mother.checklist*') ? 'active' : '' }}">
+                <i class="fas fa-clipboard-check"></i>
+                <span>Checklist</span>
+            </a>
 
-            <div class="nav-section">
-                <div class="nav-section-title">Support</div>
-                <a href="{{ route('mother.alerts') }}" class="nav-item {{ request()->routeIs('mother.alerts*') ? 'active' : '' }}">
-                    <i class="fas fa-bell"></i>
-                    <span>Alerts</span>
-                    @if(isset($mother) && $mother->unread_alerts_count > 0)
-                        <span class="nav-badge">{{ $mother->unread_alerts_count }}</span>
-                    @endif
-                </a>
-                <a href="{{ route('mother.education') }}" class="nav-item {{ request()->routeIs('mother.education*') ? 'active' : '' }}">
-                    <i class="fas fa-book-open"></i>
-                    <span>Education</span>
-                </a>
-            </div>
+            <div class="nav-label">Support & Learning</div>
+            <a href="{{ route('mother.alerts') }}" class="nav-link {{ request()->routeIs('mother.alerts*') ? 'active' : '' }}">
+                <i class="fas fa-bell"></i>
+                <span>Smart Alerts</span>
+                @if(isset($mother) && $mother->unread_alerts_count > 0)
+                    <span class="nav-badge">{{ $mother->unread_alerts_count }}</span>
+                @endif
+            </a>
+            <a href="{{ route('mother.education') }}" class="nav-link {{ request()->routeIs('mother.education*') ? 'active' : '' }}">
+                <i class="fas fa-graduation-cap"></i>
+                <span>Mama Academy</span>
+            </a>
         </nav>
 
-        <a href="{{ route('mother.emergency') }}" class="emergency-btn">
-            <i class="fas fa-phone-alt"></i>
-            Emergency Help
-        </a>
+        <div class="emergency-action">
+            <h4>Need Help?</h4>
+            <a href="{{ route('mother.emergency') }}" class="emergency-btn-red">
+                <i class="fas fa-phone-alt animate-pulse"></i>
+                SOS Emergency
+            </a>
+        </div>
     </aside>
 
-    <main class="main-content">
+    <main class="main-wrapper">
+        <header class="top-navbar">
+            <div class="welcome-greeting">
+                <div style="display: flex; align-items: center; gap: 12px;">
+                    <button class="menu-toggle-btn" onclick="toggleSidebar()">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <div>
+                        <h1>MamaCare Portal</h1>
+                        <p>{{ now()->format('l, jS F Y') }}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="top-nav-actions">
+                <a href="{{ route('mother.alerts') }}" class="action-icon-btn">
+                    <i class="fas fa-bell"></i>
+                    @if(isset($mother) && $mother->unread_alerts_count > 0)
+                        <span class="notification-dot"></span>
+                    @endif
+                </a>
+                <a href="{{ route('mother.profile') }}" class="action-icon-btn">
+                    <i class="fas fa-cog"></i>
+                </a>
+                <form action="{{ route('logout') }}" method="POST" style="display: inline;">
+                    @csrf
+                    <button type="submit" class="btn-modern btn-modern-primary" style="background: var(--dark);">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span>Log Out</span>
+                    </button>
+                </form>
+            </div>
+        </header>
+
         @if(session('success'))
-            <div class="alert alert-success animate-fade-in">
-                <i class="fas fa-check-circle"></i>
-                {{ session('success') }}
+            <div class="mb-6 p-4 rounded-2xl bg-emerald-50 border border-emerald-100 flex items-center gap-3 animate__animated animate__fadeInDown">
+                <i class="fas fa-check-circle text-emerald-600"></i>
+                <p class="text-sm font-bold text-emerald-700">{{ session('success') }}</p>
             </div>
         @endif
 
         @if(session('error'))
-            <div class="alert alert-error animate-fade-in">
-                <i class="fas fa-exclamation-circle"></i>
-                {{ session('error') }}
-            </div>
-        @endif
-
-        @if($errors->any())
-            <div class="alert alert-error animate-fade-in">
-                <i class="fas fa-exclamation-triangle"></i>
-                <ul style="margin: 0; padding-left: 16px;">
-                    @foreach($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
+            <div class="mb-6 p-4 rounded-2xl bg-rose-50 border border-rose-100 flex items-center gap-3 animate__animated animate__shakeX">
+                <i class="fas fa-exclamation-circle text-rose-600"></i>
+                <p class="text-sm font-bold text-rose-700">{{ session('error') }}</p>
             </div>
         @endif
 
@@ -721,8 +507,8 @@
         // Close sidebar when clicking outside on mobile
         document.addEventListener('click', function(e) {
             const sidebar = document.getElementById('sidebar');
-            const toggle = document.querySelector('.menu-toggle');
-            if (window.innerWidth <= 768 && 
+            const toggle = document.querySelector('.menu-toggle-btn');
+            if (window.innerWidth <= 1024 && 
                 sidebar.classList.contains('open') && 
                 !sidebar.contains(e.target) && 
                 !toggle.contains(e.target)) {
@@ -730,7 +516,6 @@
             }
         });
     </script>
-    
     @stack('scripts')
 </body>
 </html>
