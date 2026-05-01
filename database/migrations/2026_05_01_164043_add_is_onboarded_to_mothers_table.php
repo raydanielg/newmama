@@ -12,17 +12,14 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('mothers', function (Blueprint $table) {
-            //
+            $table->boolean('is_onboarded')->default(false)->after('is_approved');
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
         Schema::table('mothers', function (Blueprint $table) {
-            //
+            $table->dropColumn('is_onboarded');
         });
     }
 };
