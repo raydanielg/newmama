@@ -34,6 +34,7 @@ class Mother extends Model
         'baby_age',
         'trying_duration',
         'current_step',
+        'is_onboarded',
         'metadata'
     ];
 
@@ -42,6 +43,7 @@ class Mother extends Model
         'metadata' => 'array',
         'baby_age' => 'integer',
         'is_approved' => 'boolean',
+        'is_onboarded' => 'boolean',
         'approved_at' => 'datetime',
     ];
 
