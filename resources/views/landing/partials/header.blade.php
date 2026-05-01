@@ -38,7 +38,8 @@
 
     <div class="landing-container landing-header-inner">
         <a class="landing-brand" href="{{ url('/') }}">
-            <img class="landing-logo" src="{{ asset('meetup_3669956.png') }}" alt="Mamacare AI" />
+            <img class="landing-logo" src="{{ asset('logo.svg') }}" alt="Mamacare AI" />
+            <span class="landing-brand-text">Mamacare AI</span>
         </a>
 
         <button class="landing-nav-toggle" type="button" aria-label="Toggle menu" data-landing-nav-toggle>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 40 40" fill="none">
+  <!-- Soft background circle -->
+  <circle cx="20" cy="20" r="18" fill="#EEF2FF" />
+  <!-- Main brand path (Triangle/Mama figure) -->
+  <path d="M20 8L32 28H8L20 8Z" stroke="#1E40AF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Inner baby figure -->
+  <path d="M20 18L24 26H16L20 18Z" fill="#1E40AF"/>
+  <!-- Top soft dot -->
+  <circle cx="20" cy="8" r="2" fill="#1E40AF" />
+</svg>

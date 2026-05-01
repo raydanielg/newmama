@@ -404,16 +404,22 @@
     color: #1e40af;
     display: inline-flex;
     align-items: center;
-    line-height: 1;
+    gap: 12px;
+    text-decoration: none;
+}
+
+.landing-brand-text {
+    font-size: 20px;
+    font-weight: 900;
+    color: #1e40af;
+    letter-spacing: -0.02em;
 }
 
 .landing-logo {
-    height: 64px;
-    max-height: 64px;
+    height: 40px;
+    max-height: 40px;
     width: auto;
-    max-width: 240px;
-    object-fit: contain;
-    display: block;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
 }
 
 .landing-nav {
@@ -517,9 +523,38 @@
     position: relative;
     z-index: 1;
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1.2fr 1fr;
     align-items: center;
-    gap: 18px;
+    gap: 32px;
+}
+
+.landing-hero-image {
+    position: relative;
+}
+
+.hero-main-img {
+    width: 100%;
+    height: auto;
+    border-radius: 24px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    border: 8px solid rgba(255, 255, 255, 0.8);
+}
+
+@media (max-width: 992px) {
+    .landing-hero-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .landing-hero-copy {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    .landing-hero-actions {
+        justify-content: center;
+    }
+    .landing-hero-image {
+        margin-top: 32px;
+    }
 }
 
 .landing-hero-copy {

@@ -13,13 +13,19 @@ class ArticleSeeder extends Seeder
      */
     public function run(): void
     {
-        $logo = 'LOGO-MALKIA-KONNECT-removebg-preview.png';
+        $images = [
+            'pregnant' => 'https://images.unsplash.com/photo-1555252333-9f8e92e65df9?auto=format&fit=crop&q=80&w=800',
+            'newborn' => 'https://images.unsplash.com/photo-1519689680058-324335c77eba?auto=format&fit=crop&q=80&w=800',
+            'milestones' => 'https://images.unsplash.com/photo-1544126592-807daa2b567b?auto=format&fit=crop&q=80&w=800',
+            'feeding' => 'https://images.unsplash.com/photo-1531983412531-1f49a365ffed?auto=format&fit=crop&q=80&w=800',
+        ];
+
         $articles = [
             [
                 'title' => 'Building Secure Attachment: The Foundation of Infant Emotional Health',
                 'category' => 'Newborns (0-12 months)',
                 'age_range' => '4-6 months',
-                'image' => $logo,
+                'image' => $images['newborn'],
                 'published_at' => '2026-05-01',
                 'is_featured' => true,
                 'content' => '<p>Attachment is the deep and enduring emotional bond that connects one person to another across time and space. In infants, this bond is primarily formed with their primary caregivers, usually the mother. Secure attachment is not just about "love"; it\'s about a physiological state of safety that allows a child\'s brain to grow optimally.</p>
@@ -38,7 +44,7 @@ class ArticleSeeder extends Seeder
                 'title' => 'Navigating Common Health Concerns in Infants: A Comprehensive Guide',
                 'category' => 'Newborns (0-12 months)',
                 'age_range' => '0-3 months',
-                'image' => $logo,
+                'image' => $images['newborn'],
                 'published_at' => '2026-05-01',
                 'is_featured' => true,
                 'content' => '<p>The first few months of a baby\'s life are filled with joy, but also with many questions about their health. Understanding common concerns can help parents feel more confident and reduce unnecessary anxiety. Most of the issues babies face are part of their normal adjustment to life outside the womb.</p>
@@ -53,7 +59,7 @@ class ArticleSeeder extends Seeder
                 'title' => 'Developmental Milestones in the First Year: Supporting Your Baby\'s Growth',
                 'category' => 'Newborns (0-12 months)',
                 'age_range' => '0-3 months',
-                'image' => $logo,
+                'image' => $images['milestones'],
                 'published_at' => '2026-05-01',
                 'is_featured' => true,
                 'content' => '<p>Every baby develops at their own pace, but there are certain milestones that most babies reach during their first year. These milestones include physical, social, and cognitive developments. It\'s important to remember that these are ranges, not strict deadlines.</p>
@@ -67,7 +73,7 @@ class ArticleSeeder extends Seeder
                 'title' => 'Infant Feeding Milestones: From Exclusive Milk to First Solids',
                 'category' => 'Newborns (0-12 months)',
                 'age_range' => '0-3 months',
-                'image' => $logo,
+                'image' => $images['feeding'],
                 'published_at' => '2026-05-01',
                 'is_featured' => true,
                 'content' => '<p>Feeding is one of the most important aspects of caring for your newborn. Whether breastfeeding or using formula, ensuring your baby gets the right nutrition is vital for their brain and body development. For the first six months, exclusive milk feeding is generally recommended by health experts.</p>
