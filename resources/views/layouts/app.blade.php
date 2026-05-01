@@ -73,7 +73,7 @@
             </nav>
         @endunless
 
-        <main class="{{ request()->routeIs('login', 'register', 'password.request', 'password.email', 'password.reset', 'password.update', 'password.confirm', 'verification.notice', 'verification.verify', 'verification.send', 'verification.resend') ? '' : 'py-4' }}">
+        <main class="{{ request()->routeIs('login', 'register', 'password.request', 'password.email', 'password.reset', 'password.update', 'password.confirm', 'verification.notice', 'verification.verify', 'verification.send', 'verification.resend', 'articles', 'articles.category', 'articles.show', 'categories') ? '' : 'py-4' }}">
             @yield('content')
         </main>
     </div>
