@@ -159,8 +159,8 @@ class MotherAuthController extends Controller
         Auth::login($user);
         session(['mk_number' => $mother->mk_number]);
 
-        return redirect()->route('mother.dashboard')
-            ->with('success', 'Account created successfully! Welcome to MamaCare, ' . $mother->full_name);
+        return redirect()->route('mother.onboarding')
+            ->with('success', 'Account created successfully! Welcome to MamaCare, ' . $mother->full_name . '. Let\'s set up your profile.');
     }
 
     /**

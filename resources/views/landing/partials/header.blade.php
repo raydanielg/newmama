@@ -54,7 +54,7 @@
             <nav class="landing-nav">
                 <a class="landing-nav-link" href="{{ url('/') }}">Home</a>
                 <a class="landing-nav-link" href="{{ route('articles') }}">Articles</a>
-                <a class="landing-nav-link" href="{{ route('about') }}">About</a>
+                <a class="landing-nav-link" href="{{ route('about') }}">About Us</a>
             </nav>
 
             <div class="landing-nav-actions">
