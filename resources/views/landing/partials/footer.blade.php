@@ -3,8 +3,9 @@
         <div class="landing-footer-grid">
             {{-- Brand & About --}}
             <div class="landing-footer-col">
-                <a href="{{ url('/') }}" class="landing-footer-logo-link">
-                    <img src="{{ asset('meetup_3669956.png') }}" alt="Mamacare AI" class="landing-footer-logo">
+                <a href="{{ url('/') }}" class="landing-footer-logo-link" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
+                    <img src="{{ asset('logo.svg') }}" alt="Mamacare AI" class="landing-footer-logo" style="height: 32px; width: auto;">
+                    <span style="font-size: 18px; font-weight: 900; color: #1e40af;">Mamacare AI</span>
                 </a>
                 <p class="landing-footer-desc">
                     Supporting women through the journey of motherhood with care, knowledge, and empowerment.
