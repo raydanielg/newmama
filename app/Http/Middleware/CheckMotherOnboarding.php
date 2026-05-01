@@ -15,6 +15,14 @@ class CheckMotherOnboarding
      */
     public function handle(Request $request, Closure $next): Response
     {
+        if (auth()->check() && auth()->user()->role === 'mother') {
+            $mother = auth()->user()->mother;
+            
+            if ($mother && !$mother->is_onboarded && !$request->routeIs('mother.onboarding*')) {
+                return redirect()->route('mother.onboarding');
+            }
+        }
+
         return $next($request);
     }
 }
