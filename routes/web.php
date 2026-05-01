@@ -23,7 +23,7 @@ Route::get('/legal', function () {
 })->name('legal');
 
 Route::get('/about', function () {
-    return view('landing.landing');
+    return view('landing.about');
 })->name('about');
 
 Route::get('/articles', function () {

@@ -91,6 +91,12 @@ class MotherAuthController extends Controller
         Auth::login($user);
         session(['mk_number' => $mother->mk_number]);
 
+        // If not onboarded, redirect to onboarding, otherwise dashboard
+        if (!$mother->is_onboarded) {
+            return redirect()->route('mother.onboarding')
+                ->with('success', 'Welcome to MamaCare! Let\'s set up your profile.');
+        }
+
         return redirect()->route('mother.dashboard')
             ->with('success', 'Welcome back, ' . $mother->full_name . '!');
     }
