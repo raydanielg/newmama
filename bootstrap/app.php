@@ -14,6 +14,7 @@ return Application::configure(basePath: dirname(__DIR__))
         $middleware->alias([
             'admin' => \App\Http\Middleware\EnsureAdmin::class,
             'admin_login_activity' => \App\Http\Middleware\LogAdminLoginActivity::class,
+            'mother_onboarded' => \App\Http\Middleware\CheckMotherOnboarding::class,
         ]);
     })
     ->withExceptions(function (Exceptions $exceptions): void {
