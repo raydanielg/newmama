@@ -20,7 +20,7 @@
 </head>
 <body>
     <div id="app">
-        @unless (request()->routeIs('login', 'register', 'password.request', 'password.email', 'password.reset', 'password.update', 'password.confirm', 'verification.notice', 'verification.verify', 'verification.send', 'verification.resend', 'join', 'join.thanks', 'admin.*'))
+        @unless (request()->routeIs('login', 'register', 'password.request', 'password.email', 'password.reset', 'password.update', 'password.confirm', 'verification.notice', 'verification.verify', 'verification.send', 'verification.resend', 'join', 'join.thanks', 'admin.*', 'articles', 'articles.category', 'articles.show', 'categories'))
             <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
                 <div class="container">
                     <a class="navbar-brand" href="{{ url('/') }}">
