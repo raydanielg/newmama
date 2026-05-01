@@ -134,7 +134,7 @@
                         <label for="remember_me" class="ml-2.5 block text-xs font-bold text-slate-500 cursor-pointer">Stay logged in</label>
                     </div>
 
-                    <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-black py-4 rounded-2xl transition-all shadow-lg shadow-indigo-100 active:scale-[0.98] flex items-center justify-center gap-3 group">
+                    <button type="submit" class="w-full bg-slate-900 hover:bg-black text-white font-black py-4 rounded-2xl transition-all shadow-xl shadow-slate-200 active:scale-[0.99] flex items-center justify-center gap-3 group relative overflow-hidden border-b-4 border-slate-700">
                         <span class="btn-text">Sign In</span>
                         <i class="fas fa-arrow-right text-xs transition-transform group-hover:translate-x-1"></i>
                         <div class="loading-spinner"></div>
@@ -189,7 +189,7 @@
                         </div>
                     </div>
 
-                    <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-black py-4 rounded-2xl transition-all shadow-lg shadow-indigo-100 active:scale-[0.98] flex items-center justify-center gap-3 group mt-2">
+                    <button type="submit" class="w-full bg-slate-900 hover:bg-black text-white font-black py-4 rounded-2xl transition-all shadow-xl shadow-slate-200 active:scale-[0.99] flex items-center justify-center gap-3 group relative overflow-hidden border-b-4 border-slate-700 mt-2">
                         <span class="btn-text">Create Account</span>
                         <i class="fas fa-arrow-right text-xs transition-transform group-hover:translate-x-1"></i>
                         <div class="loading-spinner"></div>
