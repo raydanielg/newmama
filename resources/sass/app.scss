@@ -1292,27 +1292,42 @@
 
     .articles-header {
         flex-direction: column;
-        align-items: flex-start;
-        gap: 12px;
-    }
-
-    .view-all-btn {
-        width: 100%;
+        align-items: center;
         text-align: center;
+        gap: 16px;
     }
 
-    .article-image-wrapper {
-        height: 180px;
+    .articles-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
     }
 
     .categories-grid {
-        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        grid-template-columns: 1fr;
         gap: 16px;
     }
 
     .category-card {
-        padding: 18px;
-        border-radius: 16px;
+        flex-direction: row;
+        text-align: left;
+        align-items: center;
+        padding: 16px;
+    }
+
+    .landing-testimonials {
+        margin: 20px 10px;
+    }
+
+    .landing-testimonial {
+        padding: 16px;
+    }
+
+    .landing-testimonial-quote {
+        font-size: 13px;
+    }
+
+    .landing-commitment-inner {
+        padding: 20px 16px;
     }
 }
 
