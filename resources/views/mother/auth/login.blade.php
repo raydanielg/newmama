@@ -231,7 +231,7 @@
                         </div>
                     </div>
 
-                    <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-black py-4 rounded-2xl transition-all shadow-lg shadow-indigo-100 active:scale-[0.98] flex items-center justify-center gap-3 group">
+                    <button type="submit" class="w-full bg-slate-900 hover:bg-black text-white font-black py-4 rounded-2xl transition-all shadow-xl shadow-slate-200 active:scale-[0.99] flex items-center justify-center gap-3 group relative overflow-hidden border-b-4 border-slate-700">
                         <span class="btn-text">Send Reset Link</span>
                         <i class="fas fa-paper-plane text-xs transition-transform group-hover:translate-x-1 group-hover:-translate-y-1"></i>
                         <div class="loading-spinner"></div>
