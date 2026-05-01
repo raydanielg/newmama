@@ -12,8 +12,22 @@
     <style>
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
-            background: radial-gradient(circle at top right, rgba(238, 242, 255, 0.5), transparent),
-                        radial-gradient(circle at bottom left, rgba(253, 251, 247, 0.5), transparent);
+            background: url('{{ asset('flat-abstract-background-pattern-vector_822782-866.jpg') }}');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at top right, rgba(238, 242, 255, 0.4), transparent),
+                        radial-gradient(circle at bottom left, rgba(253, 251, 247, 0.4), transparent);
+            z-index: -1;
         }
         .loading-spinner {
             display: none;
@@ -177,25 +191,6 @@
             return true;
         }
 
-        function togglePassword() {
-            const passwordInput = document.getElementById('password');
-            const toggleIcon = document.getElementById('toggleIcon');
-
-            if (passwordInput.type === 'password') {
-                passwordInput.type = 'text';
-                toggleIcon.classList.remove('fa-eye');
-                toggleIcon.classList.add('fa-eye-slash');
-            } else {
-                passwordInput.type = 'password';
-                toggleIcon.classList.remove('fa-eye-slash');
-                toggleIcon.classList.add('fa-eye');
-            }
-        }
-    </script>
-</body>
-</html>
-
-    <script>
         function togglePassword() {
             const passwordInput = document.getElementById('password');
             const toggleIcon = document.getElementById('toggleIcon');
