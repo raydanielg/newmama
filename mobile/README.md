@@ -1,4 +1,4 @@
-# 🤰 MamaCare AI - Mobile Application
+# MamaCare AI - Mobile Application
 
 <div align="center">
 
@@ -8,27 +8,27 @@
 
 **Cross-platform mobile application for maternal health management**
 
-[📱 Features](#-features) • [🚀 Getting Started](#-getting-started) • [📸 Screenshots](#-screenshots)
+[Features](#features) • [Getting Started](#getting-started) • [Screenshots](#screenshots)
 
 </div>
 
 ---
 
-## 📱 Features
+## Features
 
 ### Core Features
 
 | Feature | Description | Status |
 |---------|-------------|--------|
-| **Authentication** | Email, Google, and Apple Sign-in | ✅ |
-| **Pregnancy Tracking** | Week-by-week pregnancy progress | ✅ |
-| **Health Metrics** | BP, weight, and kick count tracking | ✅ |
-| **Appointments** | View and manage clinic visits | ✅ |
-| **Daily Log** | Track symptoms and health status | ✅ |
-| **Educational Articles** | Browse maternal health content | ✅ |
-| **Emergency SOS** | Quick access to emergency numbers | ✅ |
-| **Offline Support** | Access data without internet | ✅ |
-| **Push Notifications** | Health reminders and alerts | ✅ |
+| **Authentication** | Email, Google, and Apple Sign-in | Live |
+| **Pregnancy Tracking** | Week-by-week pregnancy progress | Live |
+| **Health Metrics** | BP, weight, and kick count tracking | Live |
+| **Appointments** | View and manage clinic visits | Live |
+| **Daily Log** | Track symptoms and health status | Live |
+| **Educational Articles** | Browse maternal health content | Live |
+| **Emergency SOS** | Quick access to emergency numbers | Live |
+| **Offline Support** | Access data without internet | Live |
+| **Push Notifications** | Health reminders and alerts | Live |
 
 ### User Flow
 
@@ -44,7 +44,7 @@ Splash Screen → Welcome Screen → Login/Register → Dashboard
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -88,7 +88,7 @@ flutter build web --release
 
 ---
 
-## 🏗️ Project Structure
+## Project Structure
 
 ```
 lib/
@@ -110,7 +110,7 @@ lib/
 
 ---
 
-## 📸 Screens
+## Screens
 
 ### 1. Splash Screen
 - App logo animation
@@ -146,7 +146,7 @@ lib/
 
 ---
 
-## 🔧 Dependencies
+## Dependencies
 
 ```yaml
 dependencies:
@@ -173,7 +173,7 @@ dependencies:
 
 ---
 
-## 🌐 API Integration
+## API Integration
 
 The app connects to the MamaCare AI Laravel backend:
 
@@ -194,7 +194,7 @@ POST /api/mother/appointments
 
 ---
 
-## 🎨 Design System
+## Design System
 
 ### Colors
 - Primary: `#1E40AF` (Blue)
@@ -209,7 +209,7 @@ POST /api/mother/appointments
 
 ---
 
-## 📝 Development Guidelines
+## Development Guidelines
 
 ### Code Style
 - Follow Dart style guide
@@ -230,7 +230,7 @@ POST /api/mother/appointments
 
 ---
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### Common Issues
 
@@ -255,7 +255,7 @@ pod install
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 1. Create a feature branch
 2. Make your changes
@@ -264,7 +264,7 @@ pod install
 
 ---
 
-## 📄 License
+## License
 
 This project is part of MamaCare AI and is licensed under the MIT License.
 
@@ -272,7 +272,7 @@ This project is part of MamaCare AI and is licensed under the MIT License.
 
 <div align="center">
 
-**Made with ❤️ in Tanzania**
+**Made with care in Tanzania**
 
 [⬆ Back to Top](#-mamacare-ai---mobile-application)
 
