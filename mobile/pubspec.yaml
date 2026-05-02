@@ -40,7 +40,7 @@ flutter:
     - assets/logo.svg
     - .env
 
-flutter_icons:
+flutter_launcher_icons:
   android: "launcher_icon"
   ios: true
   image_path: "assets/images/app_icon.png"
