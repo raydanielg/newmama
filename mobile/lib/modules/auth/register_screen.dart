@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:animate_do/animate_do.dart';
 import 'package:get/get.dart';
-import 'login_screen.dart';
-import 'dashboard_screen.dart';
+import '../../core/routes/app_routes.dart';
 
 class RegisterScreen extends StatefulWidget {
   const RegisterScreen({super.key});
@@ -34,10 +33,10 @@ class _RegisterScreenState extends State<RegisterScreen> {
     setState(() => _isLoading = true);
     
     // Simulate API call
-    await Future.delayed(const Duration(seconds: 2));
+    await Future.delayed(const Duration(seconds: 1));
     
     setState(() => _isLoading = false);
-    Get.offAll(() => const DashboardScreen());
+    Get.offAllNamed(AppRoutes.onboarding);
   }
 
   @override
@@ -255,7 +254,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                           ),
                         ),
                         TextButton(
-                          onPressed: () => Get.to(() => const LoginScreen()),
+                          onPressed: () => Get.toNamed(AppRoutes.login),
                           style: TextButton.styleFrom(
                             padding: EdgeInsets.zero,
                             minimumSize: Size.zero,

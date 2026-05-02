@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:animate_do/animate_do.dart';
 import 'package:get/get.dart';
-import 'articles_screen.dart';
-import 'login_screen.dart';
+import '../../core/routes/app_routes.dart';
 
 class DashboardScreen extends StatefulWidget {
   const DashboardScreen({super.key});
@@ -508,7 +507,7 @@ class HomeTab extends StatelessWidget {
               ),
             ),
             TextButton(
-              onPressed: () => Get.to(() => const ArticlesScreen()),
+              onPressed: () => Get.toNamed(AppRoutes.articles),
               child: Text(
                 'Zote',
                 style: TextStyle(
@@ -650,14 +649,9 @@ class HomeTab extends StatelessWidget {
   }
 }
 
-class ArticlesTab extends StatelessWidget {
-  const ArticlesTab({super.key});
-
-  @override
-  Widget build(BuildContext context) {
+  Widget _buildArticlesTab() {
     return const ArticlesScreen();
   }
-}
 
 class HealthTab extends StatelessWidget {
   const HealthTab({super.key});
@@ -730,7 +724,7 @@ class ProfileTab extends StatelessWidget {
             _buildProfileItem(Icons.notifications_outlined, 'Notifications', () {}),
             _buildProfileItem(Icons.help_outline, 'Help & Support', () {}),
             _buildProfileItem(Icons.logout, 'Logout', () {
-              Get.offAll(() => const LoginScreen());
+              Get.offAllNamed(AppRoutes.login);
             }, isLogout: true),
           ],
         ),

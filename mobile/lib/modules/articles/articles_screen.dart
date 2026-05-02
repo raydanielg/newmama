@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:animate_do/animate_do.dart';
 import 'package:get/get.dart';
+import '../../core/routes/app_routes.dart';
 import 'article_detail_screen.dart';
 
 class ArticlesScreen extends StatelessWidget {
@@ -148,7 +149,10 @@ class ArticlesScreen extends StatelessWidget {
                     delay: Duration(milliseconds: 200 + (index * 100)),
                     child: _buildArticleCard(
                       articles[index],
-                      onTap: () => Get.to(() => ArticleDetailScreen(article: articles[index])),
+                      onTap: () => Get.toNamed(
+                        AppRoutes.articleDetail,
+                        arguments: {'article': articles[index]},
+                      ),
                     ),
                   );
                 },
