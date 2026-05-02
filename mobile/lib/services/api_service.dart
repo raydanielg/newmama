@@ -3,7 +3,7 @@ import 'package:http/http.dart' as http;
 import 'package:get_storage/get_storage.dart';
 
 class ApiService {
-  static const String baseUrl = 'https://mamacare.ai/api';
+  static const String baseUrl = 'https://mamacareai.co.tz/api';
   static final GetStorage _storage = GetStorage();
 
   // Auth headers
