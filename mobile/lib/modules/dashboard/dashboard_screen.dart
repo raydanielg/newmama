@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:animate_do/animate_do.dart';
 import 'package:get/get.dart';
 import '../../core/routes/app_routes.dart';
+import '../articles/articles_screen.dart';
 
 class DashboardScreen extends StatefulWidget {
   const DashboardScreen({super.key});
@@ -16,7 +17,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
 
   final List<Widget> _screens = [
     const HomeTab(),
-    const ArticlesTab(),
+    ArticlesScreen(),
     const HealthTab(),
     const ProfileTab(),
   ];
@@ -650,7 +651,7 @@ class HomeTab extends StatelessWidget {
 }
 
   Widget _buildArticlesTab() {
-    return const ArticlesScreen();
+    return ArticlesScreen();
   }
 
 class HealthTab extends StatelessWidget {
