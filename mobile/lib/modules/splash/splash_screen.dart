@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:animate_do/animate_do.dart';
 import 'package:get/get.dart';
+import '../../core/routes/app_routes.dart';
 import 'welcome_screen.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -29,7 +30,7 @@ class _SplashScreenState extends State<SplashScreen> with TickerProviderStateMix
     _controller.forward();
     
     Future.delayed(const Duration(seconds: 3), () {
-      Get.off(() => const WelcomeScreen(), transition: Transition.fadeIn);
+      Get.offNamed(AppRoutes.welcome);
     });
   }
 

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:animate_do/animate_do.dart';
 import 'package:get/get.dart';
-import 'login_screen.dart';
+import '../../core/routes/app_routes.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({super.key});
@@ -105,7 +105,7 @@ class WelcomeScreen extends StatelessWidget {
                   width: double.infinity,
                   height: 56.h,
                   child: ElevatedButton(
-                    onPressed: () => Get.to(() => const LoginScreen()),
+                    onPressed: () => Get.toNamed(AppRoutes.login),
                     style: ElevatedButton.styleFrom(
                       backgroundColor: const Color(0xFF1E293B),
                       foregroundColor: Colors.white,
