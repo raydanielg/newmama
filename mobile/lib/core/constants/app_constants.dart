@@ -5,8 +5,8 @@ class AppConstants {
   static const String appVersion = '1.0.0';
   
   // API
-  static const String baseUrl = 'https://mamacare.ai';
-  static const String apiBaseUrl = 'https://mamacare.ai/api';
+  static const String baseUrl = 'https://mamacareai.co.tz';
+  static const String apiBaseUrl = 'https://mamacareai.co.tz/api';
   static const int apiTimeout = 30000; // milliseconds
   
   // Storage Keys
