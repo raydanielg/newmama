@@ -137,7 +137,7 @@ class AppPages {
       name: AppRoutes.bookAppointment,
       page: () => const BookAppointmentScreen(),
       binding: AppointmentsBinding(),
-      transition: Transition.bottomSheet,
+      transition: Transition.cupertino,
     ),
     
     // Emergency

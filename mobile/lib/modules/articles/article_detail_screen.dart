@@ -3,12 +3,11 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
 class ArticleDetailScreen extends StatelessWidget {
-  final Map<String, dynamic> article;
-
-  const ArticleDetailScreen({super.key, required this.article});
+  const ArticleDetailScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final Map<String, dynamic> article = Get.arguments['article'];
     return Scaffold(
       backgroundColor: const Color(0xFFFDFBF7),
       body: CustomScrollView(
