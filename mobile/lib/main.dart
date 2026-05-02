@@ -1,11 +1,39 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'screens/splash_screen.dart';
+import 'package:get_storage/get_storage.dart';
+import 'core/constants/app_constants.dart';
+import 'core/routes/app_pages.dart';
+import 'core/routes/app_routes.dart';
+import 'core/theme/app_theme.dart';
+import 'services/api_service.dart';
+import 'services/storage_service.dart';
 
-void main() {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  
+  // Initialize storage
+  await GetStorage.init();
+  
+  // Set orientation
+  await SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp,
+    DeviceOrientation.portraitDown,
+  ]);
+  
+  // Set system UI style
+  SystemChrome.setSystemUIOverlayStyle(
+    const SystemUiOverlayStyle(
+      statusBarColor: Colors.transparent,
+      statusBarIconBrightness: Brightness.dark,
+    ),
+  );
+  
+  // Initialize services
+  Get.put(StorageService());
+  // ApiService handles its own storage access
+  
   runApp(const MamacareAIApp());
 }
 
@@ -20,46 +48,13 @@ class MamacareAIApp extends StatelessWidget {
       splitScreenMode: true,
       builder: (context, child) {
         return GetMaterialApp(
-          title: 'Mamacare AI',
+          title: AppConstants.appName,
           debugShowCheckedModeBanner: false,
-          theme: ThemeData(
-            useMaterial3: true,
-            colorScheme: ColorScheme.fromSeed(
-              seedColor: const Color(0xFF1E40AF),
-              primary: const Color(0xFF1E40AF),
-              secondary: const Color(0xFFD63384),
-              background: const Color(0xFFFDFBF7),
-            ),
-            textTheme: GoogleFonts.plusJakartaSansTextTheme(),
-            elevatedButtonTheme: ElevatedButtonThemeData(
-              style: ElevatedButton.styleFrom(
-                backgroundColor: const Color(0xFF1E40AF),
-                foregroundColor: Colors.white,
-                padding: EdgeInsets.symmetric(vertical: 16.h, horizontal: 24.w),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(16.r),
-                ),
-              ),
-            ),
-            inputDecorationTheme: InputDecorationTheme(
-              filled: true,
-              fillColor: const Color(0xFFF8FAFC),
-              border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(16.r),
-                borderSide: BorderSide.none,
-              ),
-              enabledBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(16.r),
-                borderSide: BorderSide.none,
-              ),
-              focusedBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(16.r),
-                borderSide: const BorderSide(color: Color(0xFF1E40AF), width: 1.5),
-              ),
-              contentPadding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 16.h),
-            ),
-          ),
-          home: const SplashScreen(),
+          theme: AppTheme.lightTheme,
+          initialRoute: AppRoutes.splash,
+          getPages: AppPages.pages,
+          defaultTransition: Transition.rightToLeft,
+          transitionDuration: const Duration(milliseconds: 300),
         );
       },
     );
