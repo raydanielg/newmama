@@ -274,6 +274,6 @@ This project is part of MamaCare AI and is licensed under the MIT License.
 
 **Made with care in Tanzania**
 
-[⬆ Back to Top](#-mamacare-ai---mobile-application)
+[Back to Top](#mamacare-ai---mobile-application)
 
 </div>
