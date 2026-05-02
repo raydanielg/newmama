@@ -97,253 +97,444 @@ class HomeTab extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: SingleChildScrollView(
+        physics: const BouncingScrollPhysics(),
+        padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 20.h),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            _buildHeader(),
+            SizedBox(height: 32.h),
+            _buildPregnancyCard(),
+            SizedBox(height: 32.h),
+            _buildMetricsGrid(),
+            SizedBox(height: 32.h),
+            _buildQuickActions(),
+            SizedBox(height: 32.h),
+            _buildArticlesSection(),
+            SizedBox(height: 40.h),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildHeader() {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              'Habari ya asubuhi,',
+              style: TextStyle(
+                fontSize: 14.sp,
+                fontWeight: FontWeight.w600,
+                color: const Color(0xFF94A3B8),
+              ),
+            ),
+            SizedBox(height: 4.h),
+            Text(
+              'Mama Sarah',
+              style: TextStyle(
+                fontSize: 26.sp,
+                fontWeight: FontWeight.w900,
+                color: const Color(0xFF1E293B),
+                letterSpacing: -0.5,
+              ),
+            ),
+          ],
+        ),
+        _buildNotificationIcon(),
+      ],
+    );
+  }
+
+  Widget _buildNotificationIcon() {
+    return Stack(
+      children: [
+        Container(
+          width: 52.w,
+          height: 52.h,
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(16.r),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black.withOpacity(0.03),
+                blurRadius: 10,
+                offset: const Offset(0, 4),
+              ),
+            ],
+          ),
+          child: Icon(
+            Icons.notifications_none_rounded,
+            color: const Color(0xFF1E293B),
+            size: 26.sp,
+          ),
+        ),
+        Positioned(
+          top: 14.h,
+          right: 14.w,
+          child: Container(
+            width: 10.w,
+            height: 10.h,
+            decoration: BoxDecoration(
+              color: const Color(0xFFD63384),
+              shape: BoxShape.circle,
+              border: Border.all(color: Colors.white, width: 2),
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+
+  Widget _buildPregnancyCard() {
+    return FadeInUp(
+      child: Container(
+        width: double.infinity,
         padding: EdgeInsets.all(24.w),
+        decoration: BoxDecoration(
+          gradient: const LinearGradient(
+            colors: [Color(0xFF1E40AF), Color(0xFF4338CA)],
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+          ),
+          borderRadius: BorderRadius.circular(32.r),
+          boxShadow: [
+            BoxShadow(
+              color: const Color(0xFF1E40AF).withOpacity(0.2),
+              blurRadius: 25,
+              offset: const Offset(0, 12),
+            ),
+          ],
+        ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
+                Container(
+                  padding: EdgeInsets.all(10.w),
+                  decoration: BoxDecoration(
+                    color: Colors.white.withOpacity(0.15),
+                    borderRadius: BorderRadius.circular(12.r),
+                  ),
+                  child: Icon(Icons.star_rounded, color: Colors.white, size: 20.sp),
+                ),
+                SizedBox(width: 12.w),
+                Text(
+                  'Wiki ya Ujauzito',
+                  style: TextStyle(
+                    fontSize: 14.sp,
+                    fontWeight: FontWeight.w700,
+                    color: Colors.white.withOpacity(0.9),
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(height: 24.h),
+            Row(
+              children: [
+                Text(
+                  '24',
+                  style: TextStyle(
+                    fontSize: 64.sp,
+                    fontWeight: FontWeight.w900,
+                    color: Colors.white,
+                    height: 1,
+                  ),
+                ),
+                SizedBox(width: 12.w),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'Good Morning,',
+                      'Wiki',
                       style: TextStyle(
-                        fontSize: 14.sp,
-                        fontWeight: FontWeight.w500,
-                        color: const Color(0xFF64748B),
+                        fontSize: 18.sp,
+                        fontWeight: FontWeight.w800,
+                        color: Colors.white,
                       ),
                     ),
-                    SizedBox(height: 4.h),
                     Text(
-                      'Mama Sarah',
+                      'Siku ya 168',
                       style: TextStyle(
-                        fontSize: 24.sp,
-                        fontWeight: FontWeight.w900,
-                        color: const Color(0xFF1E293B),
+                        fontSize: 13.sp,
+                        fontWeight: FontWeight.w600,
+                        color: Colors.white.withOpacity(0.7),
                       ),
                     ),
                   ],
                 ),
-                Container(
-                  width: 48.w,
-                  height: 48.h,
-                  decoration: BoxDecoration(
-                    color: const Color(0xFFEEF2FF),
-                    borderRadius: BorderRadius.circular(14.r),
-                  ),
-                  child: Icon(
-                    Icons.notifications_outlined,
-                    color: const Color(0xFF1E40AF),
-                    size: 24.sp,
-                  ),
-                ),
               ],
-            ),
-            SizedBox(height: 32.h),
-            FadeInUp(
-              child: Container(
-                padding: EdgeInsets.all(24.w),
-                decoration: BoxDecoration(
-                  gradient: const LinearGradient(
-                    colors: [Color(0xFF1E40AF), Color(0xFF3B82F6)],
-                    begin: Alignment.topLeft,
-                    end: Alignment.bottomRight,
-                  ),
-                  borderRadius: BorderRadius.circular(24.r),
-                ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Row(
-                      children: [
-                        Container(
-                          padding: EdgeInsets.all(8.w),
-                          decoration: BoxDecoration(
-                            color: Colors.white.withOpacity(0.2),
-                            borderRadius: BorderRadius.circular(10.r),
-                          ),
-                          child: Icon(
-                            Icons.pregnant_woman,
-                            color: Colors.white,
-                            size: 20.sp,
-                          ),
-                        ),
-                        SizedBox(width: 12.w),
-                        Text(
-                          'Pregnancy Week',
-                          style: TextStyle(
-                            fontSize: 14.sp,
-                            fontWeight: FontWeight.w600,
-                            color: Colors.white.withOpacity(0.9),
-                          ),
-                        ),
-                      ],
-                    ),
-                    SizedBox(height: 20.h),
-                    Row(
-                      crossAxisAlignment: CrossAxisAlignment.end,
-                      children: [
-                        Text(
-                          '24',
-                          style: TextStyle(
-                            fontSize: 48.sp,
-                            fontWeight: FontWeight.w900,
-                            color: Colors.white,
-                          ),
-                        ),
-                        SizedBox(width: 8.w),
-                        Padding(
-                          padding: EdgeInsets.only(bottom: 8.h),
-                          child: Text(
-                            'weeks',
-                            style: TextStyle(
-                              fontSize: 16.sp,
-                              fontWeight: FontWeight.w600,
-                              color: Colors.white.withOpacity(0.8),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                    SizedBox(height: 16.h),
-                    Container(
-                      padding: EdgeInsets.symmetric(horizontal: 12.w, vertical: 8.h),
-                      decoration: BoxDecoration(
-                        color: Colors.white.withOpacity(0.2),
-                        borderRadius: BorderRadius.circular(8.r),
-                      ),
-                      child: Text(
-                        '16 weeks to go',
-                        style: TextStyle(
-                          fontSize: 12.sp,
-                          fontWeight: FontWeight.w700,
-                          color: Colors.white,
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-            SizedBox(height: 32.h),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  'Quick Actions',
-                  style: TextStyle(
-                    fontSize: 18.sp,
-                    fontWeight: FontWeight.w800,
-                    color: const Color(0xFF1E293B),
-                  ),
-                ),
-              ],
-            ),
-            SizedBox(height: 16.h),
-            FadeInUp(
-              delay: const Duration(milliseconds: 200),
-              child: Row(
-                children: [
-                  Expanded(
-                    child: _buildActionCard(
-                      icon: Icons.chat_bubble_outline,
-                      title: 'Chat AI',
-                      color: const Color(0xFFEEF2FF),
-                      iconColor: const Color(0xFF1E40AF),
-                      onTap: () {},
-                    ),
-                  ),
-                  SizedBox(width: 12.w),
-                  Expanded(
-                    child: _buildActionCard(
-                      icon: Icons.calendar_today_outlined,
-                      title: 'Appointments',
-                      color: const Color(0xFFFDF2F8),
-                      iconColor: const Color(0xFFD63384),
-                      onTap: () {},
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            SizedBox(height: 12.h),
-            FadeInUp(
-              delay: const Duration(milliseconds: 300),
-              child: Row(
-                children: [
-                  Expanded(
-                    child: _buildActionCard(
-                      icon: Icons.monitor_weight_outlined,
-                      title: 'Weight Log',
-                      color: const Color(0xFFF0FDF4),
-                      iconColor: const Color(0xFF16A34A),
-                      onTap: () {},
-                    ),
-                  ),
-                  SizedBox(width: 12.w),
-                  Expanded(
-                    child: _buildActionCard(
-                      icon: Icons.emergency_outlined,
-                      title: 'Emergency',
-                      color: const Color(0xFFFEF2F2),
-                      iconColor: const Color(0xFFDC2626),
-                      onTap: () {},
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            SizedBox(height: 32.h),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  'Latest Articles',
-                  style: TextStyle(
-                    fontSize: 18.sp,
-                    fontWeight: FontWeight.w800,
-                    color: const Color(0xFF1E293B),
-                  ),
-                ),
-                TextButton(
-                  onPressed: () => Get.to(() => const ArticlesScreen()),
-                  child: Text(
-                    'View All',
-                    style: TextStyle(
-                      fontSize: 13.sp,
-                      fontWeight: FontWeight.w700,
-                      color: const Color(0xFF1E40AF),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-            SizedBox(height: 16.h),
-            FadeInUp(
-              delay: const Duration(milliseconds: 400),
-              child: _buildArticleCard(
-                title: 'Nutrition Tips for Second Trimester',
-                category: 'Nutrition',
-                readTime: '5 min read',
-                color: const Color(0xFFFEF3C7),
-              ),
-            ),
-            SizedBox(height: 12.h),
-            FadeInUp(
-              delay: const Duration(milliseconds: 500),
-              child: _buildArticleCard(
-                title: 'Exercise Guidelines During Pregnancy',
-                category: 'Fitness',
-                readTime: '4 min read',
-                color: const Color(0xFFE0E7FF),
-              ),
             ),
             SizedBox(height: 24.h),
+            _buildProgressBar(),
+            SizedBox(height: 16.h),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  'Bado wiki 16',
+                  style: TextStyle(
+                    fontSize: 12.sp,
+                    fontWeight: FontWeight.w800,
+                    color: Colors.white.withOpacity(0.9),
+                  ),
+                ),
+                Text(
+                  'Mei 24, 2026',
+                  style: TextStyle(
+                    fontSize: 12.sp,
+                    fontWeight: FontWeight.w800,
+                    color: Colors.white.withOpacity(0.9),
+                  ),
+                ),
+              ],
+            ),
           ],
         ),
       ),
+    );
+  }
+
+  Widget _buildProgressBar() {
+    return Container(
+      height: 10.h,
+      width: double.infinity,
+      decoration: BoxDecoration(
+        color: Colors.white.withOpacity(0.1),
+        borderRadius: BorderRadius.circular(10.r),
+      ),
+      child: FractionallySizedBox(
+        alignment: Alignment.centerLeft,
+        widthFactor: 0.6,
+        child: Container(
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(10.r),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black.withOpacity(0.1),
+                blurRadius: 4,
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _buildMetricsGrid() {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          'Afya Yako Leo',
+          style: TextStyle(
+            fontSize: 18.sp,
+            fontWeight: FontWeight.w900,
+            color: const Color(0xFF1E293B),
+          ),
+        ),
+        SizedBox(height: 16.h),
+        Row(
+          children: [
+            Expanded(
+              child: _buildMetricCard(
+                title: 'Uzito',
+                value: '68.5',
+                unit: 'kg',
+                icon: Icons.monitor_weight_outlined,
+                color: const Color(0xFFF0FDF4),
+                iconColor: const Color(0xFF16A34A),
+                trend: '+0.5 wiki hii',
+              ),
+            ),
+            SizedBox(width: 16.w),
+            Expanded(
+              child: _buildMetricCard(
+                title: 'Pressure',
+                value: '120/80',
+                unit: 'mmHg',
+                icon: Icons.favorite_outline_rounded,
+                color: const Color(0xFFFEF2F2),
+                iconColor: const Color(0xFFDC2626),
+                trend: 'Salama',
+              ),
+            ),
+          ],
+        ),
+      ],
+    );
+  }
+
+  Widget _buildMetricCard({
+    required String title,
+    required String value,
+    required String unit,
+    required IconData icon,
+    required Color color,
+    required Color iconColor,
+    required String trend,
+  }) {
+    return Container(
+      padding: EdgeInsets.all(20.w),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(24.r),
+        border: Border.all(color: const Color(0xFFF1F5F9)),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Container(
+            padding: EdgeInsets.all(8.w),
+            decoration: BoxDecoration(color: color, borderRadius: BorderRadius.circular(10.r)),
+            child: Icon(icon, color: iconColor, size: 20.sp),
+          ),
+          SizedBox(height: 16.h),
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.end,
+            children: [
+              Text(
+                value,
+                style: TextStyle(
+                  fontSize: 20.sp,
+                  fontWeight: FontWeight.w900,
+                  color: const Color(0xFF1E293B),
+                ),
+              ),
+              SizedBox(width: 4.w),
+              Padding(
+                padding: EdgeInsets.only(bottom: 2.h),
+                child: Text(
+                  unit,
+                  style: TextStyle(
+                    fontSize: 12.sp,
+                    fontWeight: FontWeight.w600,
+                    color: const Color(0xFF94A3B8),
+                  ),
+                ),
+              ),
+            ],
+          ),
+          SizedBox(height: 4.h),
+          Text(
+            trend,
+            style: TextStyle(
+              fontSize: 11.sp,
+              fontWeight: FontWeight.w700,
+              color: iconColor,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildQuickActions() {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          'Huduma za Haraka',
+          style: TextStyle(
+            fontSize: 18.sp,
+            fontWeight: FontWeight.w900,
+            color: const Color(0xFF1E293B),
+          ),
+        ),
+        SizedBox(height: 16.h),
+        SizedBox(
+          height: 100.h,
+          child: ListView(
+            scrollDirection: Axis.horizontal,
+            physics: const BouncingScrollPhysics(),
+            children: [
+              _buildQuickActionItem(Icons.chat_bubble_rounded, 'Chat AI', const Color(0xFF1E40AF)),
+              _buildQuickActionItem(Icons.calendar_month_rounded, 'Clinic', const Color(0xFFD63384)),
+              _buildQuickActionItem(Icons.emergency_rounded, 'Msaada', const Color(0xFFDC2626)),
+              _buildQuickActionItem(Icons.shopping_bag_rounded, 'Duka', const Color(0xFF16A34A)),
+            ],
+          ),
+        ),
+      ],
+    );
+  }
+
+  Widget _buildQuickActionItem(IconData icon, String title, Color color) {
+    return Container(
+      width: 90.w,
+      margin: EdgeInsets.only(right: 16.w),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(20.r),
+        border: Border.all(color: const Color(0xFFF1F5F9)),
+      ),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Icon(icon, color: color, size: 28.sp),
+          SizedBox(height: 8.h),
+          Text(
+            title,
+            style: TextStyle(
+              fontSize: 13.sp,
+              fontWeight: FontWeight.w800,
+              color: const Color(0xFF1E293B),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildArticlesSection() {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text(
+              'Makala za Leo',
+              style: TextStyle(
+                fontSize: 18.sp,
+                fontWeight: FontWeight.w900,
+                color: const Color(0xFF1E293B),
+              ),
+            ),
+            TextButton(
+              onPressed: () => Get.to(() => const ArticlesScreen()),
+              child: Text(
+                'Zote',
+                style: TextStyle(
+                  fontSize: 14.sp,
+                  fontWeight: FontWeight.w800,
+                  color: const Color(0xFF1E40AF),
+                ),
+              ),
+            ),
+          ],
+        ),
+        SizedBox(height: 8.h),
+        _buildArticleCard(
+          title: 'Vyakula muhimu kwa mwezi wa 6',
+          category: 'Lishe',
+          readTime: 'Dak 5',
+          color: const Color(0xFFFEF3C7),
+        ),
+        SizedBox(height: 12.h),
+        _buildArticleCard(
+          title: 'Mazoezi mepesi ya asubuhi',
+          category: 'Mazoezi',
+          readTime: 'Dak 4',
+          color: const Color(0xFFE0E7FF),
+        ),
+      ],
     );
   }
 
