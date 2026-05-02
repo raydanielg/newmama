@@ -1,4 +1,4 @@
-# 🤰 MamaCare AI - Maternal Health Management System
+# MamaCare AI - Maternal Health Management System
 
 <div align="center">
 
@@ -10,32 +10,32 @@
 
 **MamaCare AI** is a comprehensive maternal health management platform combining web ERP, mobile applications, and WhatsApp integration to provide end-to-end healthcare solutions for mothers in Tanzania and beyond.
 
-[🌐 Live Demo](https://mamcareai.co.tz) • [📖 Documentation](#documentation) • [🚀 Quick Start](#quick-start) • [📱 Mobile App](#mobile-application)
+[Live Demo](https://mamcareai.co.tz) • [Documentation](#documentation) • [Quick Start](#quick-start) • [Mobile App](#mobile-application)
 
 </div>
 
 ---
 
-## 📋 Table of Contents
+## Table of Contents
 
-- [Overview](#-overview)
-- [Features](#-features)
-- [Architecture](#-architecture)
-- [Technology Stack](#-technology-stack)
-- [Installation](#-installation)
-- [Configuration](#-configuration)
-- [Modules](#-modules)
-- [API Documentation](#-api-documentation)
-- [Mobile Application](#-mobile-application)
-- [WhatsApp Integration](#-whatsapp-integration)
-- [Screenshots](#-screenshots)
-- [Contributing](#-contributing)
-- [License](#-license)
-- [Support](#-support)
+- [Overview](#overview)
+- [Features](#features)
+- [Architecture](#architecture)
+- [Technology Stack](#technology-stack)
+- [Installation](#installation)
+- [Configuration](#configuration)
+- [Modules](#modules)
+- [API Documentation](#api-documentation)
+- [Mobile Application](#mobile-application)
+- [WhatsApp Integration](#whatsapp-integration)
+- [Screenshots](#screenshots)
+- [Contributing](#contributing)
+- [License](#license)
+- [Support](#support)
 
 ---
 
-## 🌟 Overview
+## Overview
 
 MamaCare AI is an innovative healthcare technology solution designed to transform maternal health management in Tanzania. The platform addresses critical challenges in maternal healthcare by providing:
 
@@ -47,75 +47,75 @@ MamaCare AI is an innovative healthcare technology solution designed to transfor
 - **Educational Resources** - Pregnancy and maternal health education
 - **ERP Integration** - Full business management for healthcare providers
 
-### 🎯 Mission
+### Mission
 
 To reduce maternal mortality rates and improve pregnancy outcomes through accessible, technology-driven healthcare solutions that connect mothers, healthcare providers, and emergency services.
 
 ---
 
-## ✨ Features
+## Features
 
-### 🤰 Mother-Centric Features
+### Mother-Centric Features
 
 | Feature | Description | Status |
 |---------|-------------|--------|
-| **Pregnancy Tracking** | Week-by-week pregnancy progression monitoring | ✅ Live |
-| **Health Metrics** | BP, weight, kick count logging with visual charts | ✅ Live |
-| **Appointment Scheduler** | Book and manage clinic appointments | ✅ Live |
-| **WhatsApp Reminders** | Automated daily, weekly, and appointment reminders | ✅ Live |
-| **Emergency SOS** | One-click emergency hotline access | ✅ Live |
-| **Health Checklist** | Interactive trimester-based task management | ✅ Live |
-| **Daily Health Log** | Symptoms, mood, and health status tracking | ✅ Live |
-| **Educational Content** | Articles and videos on maternal health | ✅ Live |
-| **AI Health Alerts** | Smart alerts for abnormal health readings | ✅ Live |
+| **Pregnancy Tracking** | Week-by-week pregnancy progression monitoring | Live |
+| **Health Metrics** | BP, weight, kick count logging with visual charts | Live |
+| **Appointment Scheduler** | Book and manage clinic appointments | Live |
+| **WhatsApp Reminders** | Automated daily, weekly, and appointment reminders | Live |
+| **Emergency SOS** | One-click emergency hotline access | Live |
+| **Health Checklist** | Interactive trimester-based task management | Live |
+| **Daily Health Log** | Symptoms, mood, and health status tracking | Live |
+| **Educational Content** | Articles and videos on maternal health | Live |
+| **AI Health Alerts** | Smart alerts for abnormal health readings | Live |
 
-### 🏥 Administrative Features (ERP)
+### Administrative Features (ERP)
 
 | Module | Features | Status |
 |--------|----------|--------|
-| **Accounting** | Double-entry bookkeeping, journals, vouchers, financial reports | ✅ Live |
-| **Inventory** | Stock management, products, purchase orders | ✅ Live |
-| **Sales & POS** | Point of sale, sales invoices, quotations | ✅ Live |
-| **CRM** | Customer management, loyalty programs, feedback, automations | ✅ Live |
-| **HRM** | Employee management, payroll, leave, attendance, assets | ✅ Live |
-| **ELMS** | Education learning management system for courses | ✅ Live |
-| **Investors** | Investment tracking, portfolio management, reports | ✅ Live |
-| **Imports** | Import order management with CSV bulk upload | ✅ Live |
+| **Accounting** | Double-entry bookkeeping, journals, vouchers, financial reports | Live |
+| **Inventory** | Stock management, products, purchase orders | Live |
+| **Sales & POS** | Point of sale, sales invoices, quotations | Live |
+| **CRM** | Customer management, loyalty programs, feedback, automations | Live |
+| **HRM** | Employee management, payroll, leave, attendance, assets | Live |
+| **ELMS** | Education learning management system for courses | Live |
+| **Investors** | Investment tracking, portfolio management, reports | Live |
+| **Imports** | Import order management with CSV bulk upload | Live |
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 ```
-┌─────────────────────────────────────────────────────────────────┐
-│                        MamaCare AI Platform                      │
-├─────────────────────────────────────────────────────────────────┤
-│                                                                  │
-│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐          │
-│  │   Web App    │  │  Mobile App  │  │  WhatsApp    │          │
-│  │   (Laravel)  │  │  (Flutter)   │  │    Bot       │          │
-│  │              │  │              │  │  (Node.js)   │          │
-│  └──────┬───────┘  └──────┬───────┘  └──────┬───────┘          │
-│         │                 │                 │                    │
-│         └─────────────────┼─────────────────┘                    │
-│                           │                                      │
-│  ┌────────────────────────┴────────────────────────┐             │
-│  │              API Layer (REST)                    │             │
-│  └────────────────────────┬────────────────────────┘             │
-│                           │                                      │
-│  ┌────────────────────────┴────────────────────────┐             │
-│  │           Application Layer (Laravel)              │             │
-│  │  ┌─────────┐ ┌─────────┐ ┌─────────┐ ┌────────┐ │             │
-│  │  │ Models  │ │Services │ │Controllers│ │Middleware│ │             │
-│  │  └─────────┘ └─────────┘ └─────────┘ └────────┘ │             │
-│  └────────────────────────┬────────────────────────┘             │
-│                           │                                      │
-│  ┌────────────────────────┴────────────────────────┐             │
-│  │              Database Layer                      │             │
-│  │         (SQLite / MySQL / PostgreSQL)            │             │
-│  └─────────────────────────────────────────────────┘             │
-│                                                                  │
-└─────────────────────────────────────────────────────────────────┘
++-------------------------------------------------------------+
+|                     MamaCare AI Platform                    |
++-------------------------------------------------------------+
+|                                                             |
+|  +-------------+  +-------------+  +-------------+      |
+|  |   Web App   |  |  Mobile App |  |  WhatsApp   |      |
+|  |  (Laravel)  |  |  (Flutter)  |  |    Bot      |      |
+|  |             |  |             |  |  (Node.js)  |      |
+|  +------+------+  +------+------+  +------+------+      |
+|         |                |                |               |
+|         +----------------+----------------+               |
+|                          |                                |
+|  +-----------------------+-----------------------+        |
+|  |              API Layer (REST)                  |        |
+|  +-----------------------+-----------------------+        |
+|                          |                                |
+|  +-----------------------+-----------------------+        |
+|  |          Application Layer (Laravel)           |        |
+|  |  +--------+ +--------+ +--------+ +--------+ |        |
+|  |  | Models | |Services | |Controllers| |Middleware| |        |
+|  |  +--------+ +--------+ +--------+ +--------+ |        |
+|  +-----------------------+-----------------------+        |
+|                          |                                |
+|  +-----------------------+-----------------------+        |
+|  |              Database Layer                    |        |
+|  |       (SQLite / MySQL / PostgreSQL)            |        |
+|  +-----------------------------------------------+        |
+|                                                             |
++-------------------------------------------------------------+
 ```
 
 ### System Components
@@ -140,7 +140,7 @@ To reduce maternal mortality rates and improve pregnancy outcomes through access
 
 ---
 
-## 💻 Technology Stack
+## Technology Stack
 
 ### Backend
 - **Framework**: Laravel 13.x (PHP 8.3)
@@ -175,7 +175,7 @@ To reduce maternal mortality rates and improve pregnancy outcomes through access
 
 ---
 
-## 🚀 Installation
+## Installation
 
 ### Prerequisites
 
@@ -229,7 +229,7 @@ This single command will:
 
 ---
 
-## ⚙️ Configuration
+## Configuration
 
 ### Environment Variables
 
@@ -277,9 +277,9 @@ npm start
 
 ---
 
-## 📦 Modules
+## Modules
 
-### 🤰 MamaCare (Maternal Health)
+### MamaCare (Maternal Health)
 
 ```php
 // Key Models
@@ -300,7 +300,7 @@ MotherChecklistItem     # Pregnancy task checklist
 - Emergency SOS functionality
 - Educational content delivery
 
-### 📊 Accounting Module
+### Accounting Module
 
 ```php
 Account                 # Chart of accounts
@@ -316,7 +316,7 @@ VoucherLine             # Voucher details
 - Financial reports (P&L, Balance Sheet, Trial Balance)
 - Voucher types: Cash Payment, Sales Invoice, Purchase Order, etc.
 
-### 👥 CRM Module
+### CRM Module
 
 ```php
 CrmInboxMessage         # Customer messages
@@ -329,7 +329,7 @@ CrmFeedbackEntry        # Customer feedback
 CrmUpsellCampaign       # Upselling campaigns
 ```
 
-### 👨‍💼 HRM Module
+### HRM Module
 
 ```php
 Employee                # Employee records
@@ -342,7 +342,7 @@ Payslip                 # Employee payslips
 AttendanceLog           # Attendance tracking
 ```
 
-### 📚 ELMS Module
+### ELMS Module
 
 ```php
 ElmsCourse              # Online courses
@@ -355,7 +355,7 @@ ElmsTrainer             # Course instructors
 
 ---
 
-## 🔌 API Documentation
+## API Documentation
 
 ### Authentication
 
@@ -392,7 +392,7 @@ GET /api/webhooks/whatsapp-stats
 
 ---
 
-## 📱 Mobile Application
+## Mobile Application
 
 The Flutter mobile app provides mothers with on-the-go access to their health information.
 
@@ -435,7 +435,7 @@ flutter build ios --release
 
 ---
 
-## 💬 WhatsApp Integration
+## WhatsApp Integration
 
 The WhatsApp bot provides automated communication with mothers through their preferred messaging platform.
 
@@ -453,77 +453,77 @@ The WhatsApp bot provides automated communication with mothers through their pre
 ### Sample WhatsApp Message
 
 ```
-🤰 *MamaCare - Wiki ya 24*
+*MamaCare - Wiki ya 24*
 
 Habari Mary,
 
 Uko trimester 2, wiki 24.
 
-💡 *Ushauri wa Wiki:*
-• Ongeza chakula chenye chuma (iron)
-• Anza maswali ya kliniki
-• Sikiliza mpigo wa moyo wa mtoto
+*Ushauri wa Wiki:*
+- Ongeza chakula chenye chuma (iron)
+- Anza maswali ya kliniki
+- Sikiliza mpigo wa moyo wa mtoto
 
-🔗 *Angalia Dashboard yako:*
+*Angalia Dashboard yako:*
 https://mamcareai.co.tz/mother/dashboard
 
-🚨 *Dharura? Piga 114*
+*Dharura? Piga 114*
 ```
 
 ---
 
-## 📸 Screenshots
+## Screenshots
 
 ### Mother Dashboard
 ```
-┌─────────────────────────────┐
-│  🤰 MamaCare AI             │
-│  Habari, Mary!              │
-│                             │
-│  ┌─────────────────────┐   │
-│  │  Week 24            │   │
-│  │  Trimester 2        │   │
-│  │  ████████░░ 60%     │   │
-│  └─────────────────────┘   │
-│                             │
-│  📊 Health Metrics:         │
-│  • BP: 120/80 ✅          │
-│  • Weight: 68kg (+2kg)    │
-│                             │
-│  📅 Next Appointment:       │
-│  Tomorrow, 10:00 AM         │
-│                             │
-│  [🚨 Emergency] [📋 Log]   │
-└─────────────────────────────┘
++-----------------------------+
+|  MamaCare AI                |
+|  Habari, Mary!              |
+|                             |
+|  +---------------------+    |
+|  |  Week 24            |    |
+|  |  Trimester 2        |    |
+|  |  [========--] 60%   |    |
+|  +---------------------+    |
+|                             |
+|  Health Metrics:            |
+|  - BP: 120/80 OK            |
+|  - Weight: 68kg (+2kg)      |
+|                             |
+|  Next Appointment:          |
+|  Tomorrow, 10:00 AM         |
+|                             |
+|  [Emergency] [Daily Log]      |
++-----------------------------+
 ```
 
 ### Admin ERP Dashboard
 ```
-┌─────────────────────────────────────────────┐
-│  MamaCare AI Admin              [👤 Admin] │
-├─────────────────────────────────────────────┤
-│                                             │
-│  📊 Quick Stats:                            │
-│  ┌──────────┬──────────┬──────────┐      │
-│  │ Mothers  │ Pending  │ Alerts   │      │
-│  │  1,234   │   45     │   12     │      │
-│  └──────────┴──────────┴──────────┘      │
-│                                             │
-│  🏥 Modules:                                │
-│  [Accounting] [Inventory] [Sales] [CRM]  │
-│  [HRM] [ELMS] [Investors] [Reports]        │
-│                                             │
-│  📈 Revenue Chart:                          │
-│  ▁▂▄▅▇███▇▅▄▂▁ (Last 30 days)            │
-│                                             │
-└─────────────────────────────────────────────┘
++---------------------------------------------+
+|  MamaCare AI Admin              [ Admin ]   |
++---------------------------------------------+
+|                                             |
+|  Quick Stats:                               |
+|  +----------+----------+----------+       |
+|  | Mothers  | Pending  | Alerts   |       |
+|  |  1,234   |   45     |   12     |       |
+|  +----------+----------+----------+       |
+|                                             |
+|  Modules:                                   |
+|  [Accounting] [Inventory] [Sales] [CRM]   |
+|  [HRM] [ELMS] [Investors] [Reports]       |
+|                                             |
+|  Revenue Chart:                             |
+|  [Last 30 days chart]                     |
+|                                             |
++---------------------------------------------+
 ```
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
-We welcome contributions! Please follow these guidelines:
+We welcome contributions. Please follow these guidelines:
 
 ### Development Workflow
 
@@ -554,7 +554,7 @@ Types: `feat`, `fix`, `docs`, `style`, `refactor`, `test`, `chore`
 
 ---
 
-## 📄 License
+## License
 
 This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
 
@@ -576,27 +576,27 @@ copies or substantial portions of the Software.
 
 ---
 
-## 🆘 Support
+## Support
 
 ### Help Channels
 
 | Channel | Link | Response Time |
 |---------|------|---------------|
-| 🐛 Bug Reports | [GitHub Issues](../../issues) | 24-48 hours |
-| 💡 Feature Requests | [GitHub Discussions](../../discussions) | 48-72 hours |
-| 📧 Email | support@mamcareai.co.tz | 24 hours |
-| 📱 WhatsApp | +255 123 456 789 | 1-2 hours |
+| Bug Reports | [GitHub Issues](../../issues) | 24-48 hours |
+| Feature Requests | [GitHub Discussions](../../discussions) | 48-72 hours |
+| Email | support@mamcareai.co.tz | 24 hours |
+| WhatsApp | +255 742 710 054 | 1-2 hours |
 
 ### Emergency
 
-For medical emergencies, **always call:**
-- 🚨 **114** - Tanzania Health Emergency
-- 🚨 **112** - General Emergency
-- 🚨 **999** - Police/Rescue
+For medical emergencies, always call:
+- **114** - Tanzania Health Emergency
+- **112** - General Emergency
+- **999** - Police/Rescue
 
 ---
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - **Laravel Team** for the amazing framework
 - **Flutter Team** for cross-platform development
@@ -608,8 +608,8 @@ For medical emergencies, **always call:**
 
 <div align="center">
 
-**Made with ❤️ in Tanzania**
+**Made with care in Tanzania**
 
-[⬆ Back to Top](#-mamacare-ai---maternal-health-management-system)
+[Back to Top](#mamacare-ai---maternal-health-management-system)
 
 </div>
