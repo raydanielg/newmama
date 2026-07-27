@@ -18,9 +18,9 @@
                 extend: {
                     colors: {
                         rosebrand: {
-                            50: '#fff1f2', 100: '#ffe4e6', 200: '#fecdd3', 300: '#fda4af',
-                            400: '#fb7185', 500: '#f43f5e', 600: '#e11d48', 700: '#be123c',
-                            800: '#9f1239', 900: '#881337'
+                            50: '#f5f3ff', 100: '#ede9fe', 200: '#ddd6fe', 300: '#c4b5fd',
+                            400: '#a78bfa', 500: '#8b5cf6', 600: '#7c3aed', 700: '#6d28d9',
+                            800: '#5b21b6', 900: '#4c1d95'
                         },
                         gold: {
                             50: '#fffbeb', 100: '#fef3c7', 200: '#fde68a', 300: '#fcd34d',
@@ -64,7 +64,7 @@
 
         .ajax-loader {
             position: fixed; top: 0; left: 0; right: 0; height: 3px;
-            background: linear-gradient(90deg, #e11d48, #fbbf24, #e11d48);
+            background: linear-gradient(90deg, #4c1d95, #fbbf24, #4c1d95);
             background-size: 200% 100%;
             animation: ajaxProgress 1s linear infinite;
             z-index: 9999; display: none;
@@ -77,7 +77,7 @@
     {{-- Auth Background --}}
     <div class="fixed inset-0 z-0">
         <img src="{{ asset('flat-abstract-background-pattern-vector_822782-866.jpg') }}" alt="Background" class="w-full h-full object-cover">
-        <div class="absolute inset-0 bg-gradient-to-br from-rosebrand-900/90 via-rosebrand-800/85 to-rosebrand-700/80"></div>
+        <div class="absolute inset-0 bg-gradient-to-br from-violet-900/90 via-violet-800/85 to-violet-700/80"></div>
         <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(rgba(255,255,255,0.15) 1px, transparent 1px); background-size: 24px 24px;"></div>
     </div>
 
