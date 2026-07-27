@@ -16,7 +16,7 @@ class SiteContactSeeder extends Seeder
             ['id' => 1],
             [
                 'phone' => '+255 713 436 792',
-                'email' => 'support@malkiakonnect.co.tz',
+                'email' => 'info@mamacareai.co.tz',
                 'instagram_url' => 'https://instagram.com/malkiakonnect',
                 'updated_at' => now(),
                 'created_at' => now(),

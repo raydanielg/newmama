@@ -18,7 +18,7 @@
                     <p>Mamacare AI is a registered company in the United Republic of Tanzania.</p>
                     
                     <h3>Contact Information</h3>
-                    <p>Email: support@mamacare.ai</p>
+                    <p>Email: info@mamacareai.co.tz</p>
                     <p>Phone: +255 713 436 792</p>
 
                     <h3>Intellectual Property</h3>

@@ -10,14 +10,14 @@
                     </span>
                     <span>{{ $siteContact->phone ?? '+255 713 436 792' }}</span>
                 </a>
-                <a class="landing-topbar-link" href="mailto:{{ $siteContact->email ?? 'info@mamacare.ai' }}">
+                <a class="landing-topbar-link" href="mailto:{{ $siteContact->email ?? 'info@mamacareai.co.tz' }}">
                     <span class="landing-topbar-icon" aria-hidden="true">
                         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M4 6h16v12H4V6Z" stroke="currentColor" stroke-width="1.8"/>
                             <path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </span>
-                    <span>{{ $siteContact->email ?? 'info@mamacare.ai' }}</span>
+                    <span>{{ $siteContact->email ?? 'info@mamacareai.co.tz' }}</span>
                 </a>
             </div>
 
