@@ -1,0 +1,14 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Redirect all requests to the public directory
+    RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>
+
+# Prevent direct access to sensitive files
+<FilesMatch "(?i)\.(env|git|gitattributes|gitignore|json|lock|md|xml|log|yml|yaml)$">
+    Require all denied
+</FilesMatch>
+
+# Disable directory listing
+Options -Indexes
