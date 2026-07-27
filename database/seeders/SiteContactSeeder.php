@@ -15,7 +15,7 @@ class SiteContactSeeder extends Seeder
         DB::table('site_contacts')->updateOrInsert(
             ['id' => 1],
             [
-                'phone' => '+255 700 000 000',
+                'phone' => '+255 713 436 792',
                 'email' => 'support@malkiakonnect.co.tz',
                 'instagram_url' => 'https://instagram.com/malkiakonnect',
                 'updated_at' => now(),

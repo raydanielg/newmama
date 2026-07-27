@@ -2,13 +2,13 @@
     <div class="landing-topbar">
         <div class="landing-container landing-topbar-inner">
             <div class="landing-topbar-left">
-                <a class="landing-topbar-link" href="tel:{{ $siteContact->phone ?? '+255700000000' }}">
+                <a class="landing-topbar-link" href="tel:{{ $siteContact->phone ?? '+255713436792' }}">
                     <span class="landing-topbar-icon" aria-hidden="true">
                         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M7 4h3l2 5-2 1c1.2 2.6 3.4 4.8 6 6l1-2 5 2v3c0 1.1-.9 2-2 2-9.4 0-17-7.6-17-17 0-1.1.9-2 2-2Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
                         </svg>
                     </span>
-                    <span>{{ $siteContact->phone ?? '+255 700 000 000' }}</span>
+                    <span>{{ $siteContact->phone ?? '+255 713 436 792' }}</span>
                 </a>
                 <a class="landing-topbar-link" href="mailto:{{ $siteContact->email ?? 'info@mamacare.ai' }}">
                     <span class="landing-topbar-icon" aria-hidden="true">

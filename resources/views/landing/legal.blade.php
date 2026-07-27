@@ -19,7 +19,7 @@
                     
                     <h3>Contact Information</h3>
                     <p>Email: support@mamacare.ai</p>
-                    <p>Phone: +255 700 000 000</p>
+                    <p>Phone: +255 713 436 792</p>
 
                     <h3>Intellectual Property</h3>
                     <p>All content, logos, and materials on this website are the property of Mamacare AI and are protected by applicable copyright and trademark law.</p>
