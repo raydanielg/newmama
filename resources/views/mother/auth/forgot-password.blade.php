@@ -7,12 +7,12 @@
     <div class="bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden">
 
         {{-- Header --}}
-        <div class="bg-gradient-to-br from-rosebrand-600 to-rosebrand-700 px-8 py-8 text-center">
+        <div class="bg-gradient-to-br from-violet-600 to-violet-700 px-8 py-8 text-center">
             <div class="w-16 h-16 mx-auto bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center mb-4 logo-float">
                 <img src="{{ asset('logo.svg') }}" alt="Mamacare AI" class="w-10 h-10 object-contain">
             </div>
             <h2 class="text-2xl font-extrabold text-white">Reset Password</h2>
-            <p class="text-rosebrand-100 text-sm mt-1">We'll help you get back into your account</p>
+            <p class="text-violet-100 text-sm mt-1">We'll help you get back into your account</p>
         </div>
 
         {{-- Form --}}
@@ -38,7 +38,7 @@
                             <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
                         </div>
                         <input id="login" type="text" name="login" value="{{ old('login') }}" required autofocus
-                            class="w-full pl-11 pr-4 py-2.5 rounded-lg border @error('login') border-red-300 ring-2 ring-red-100 @else border-gray-200 @enderror focus:border-rosebrand-500 focus:ring-2 focus:ring-rosebrand-200 outline-none transition-all text-sm"
+                            class="w-full pl-11 pr-4 py-2.5 rounded-lg border @error('login') border-red-300 ring-2 ring-red-100 @else border-gray-200 @enderror focus:border-violet-500 focus:ring-2 focus:ring-violet-200 outline-none transition-all text-sm"
                             placeholder="07XX XXX XXX or email">
                     </div>
                     @error('login')<p class="mt-1 text-xs text-red-600">{{ $message }}</p>@enderror
@@ -78,7 +78,7 @@
             {{-- Login link --}}
             <p class="mt-8 text-center text-sm text-gray-500">
                 Remember your password?
-                <a href="{{ route('mother.login') }}" class="font-semibold text-rosebrand-600 hover:text-rosebrand-700 transition-colors">Sign in</a>
+                <a href="{{ route('mother.login') }}" class="font-semibold text-violet-600 hover:text-violet-700 transition-colors">Sign in</a>
             </p>
         </div>
     </div>

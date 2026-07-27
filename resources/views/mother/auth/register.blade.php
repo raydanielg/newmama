@@ -7,12 +7,12 @@
     <div class="bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden">
 
         {{-- Header --}}
-        <div class="bg-gradient-to-br from-rosebrand-600 to-rosebrand-700 px-8 py-8 text-center">
+        <div class="bg-gradient-to-br from-violet-600 to-violet-700 px-8 py-8 text-center">
             <div class="w-16 h-16 mx-auto bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center mb-4 logo-float">
                 <img src="{{ asset('logo.svg') }}" alt="Mamacare AI" class="w-10 h-10 object-contain">
             </div>
             <h2 class="text-2xl font-extrabold text-white">Join Mamacare</h2>
-            <p class="text-rosebrand-100 text-sm mt-1">Start your personalized motherhood journey</p>
+            <p class="text-violet-100 text-sm mt-1">Start your personalized motherhood journey</p>
         </div>
 
         {{-- Form --}}
@@ -28,7 +28,7 @@
                             <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
                         </div>
                         <input id="name" type="text" name="name" value="{{ old('name') }}" required autofocus
-                            class="w-full pl-11 pr-4 py-2.5 rounded-lg border @error('name') border-red-300 ring-2 ring-red-100 @else border-gray-200 @enderror focus:border-rosebrand-500 focus:ring-2 focus:ring-rosebrand-200 outline-none transition-all text-sm"
+                            class="w-full pl-11 pr-4 py-2.5 rounded-lg border @error('name') border-red-300 ring-2 ring-red-100 @else border-gray-200 @enderror focus:border-violet-500 focus:ring-2 focus:ring-violet-200 outline-none transition-all text-sm"
                             placeholder="Enter your full name">
                     </div>
                     @error('name')<p class="mt-1 text-xs text-red-600">{{ $message }}</p>@enderror
@@ -42,7 +42,7 @@
                             <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
                         </div>
                         <input id="login" type="text" name="login" value="{{ old('login') }}" required
-                            class="w-full pl-11 pr-4 py-2.5 rounded-lg border @error('login') border-red-300 ring-2 ring-red-100 @else border-gray-200 @enderror focus:border-rosebrand-500 focus:ring-2 focus:ring-rosebrand-200 outline-none transition-all text-sm"
+                            class="w-full pl-11 pr-4 py-2.5 rounded-lg border @error('login') border-red-300 ring-2 ring-red-100 @else border-gray-200 @enderror focus:border-violet-500 focus:ring-2 focus:ring-violet-200 outline-none transition-all text-sm"
                             placeholder="07XX XXX XXX or email">
                     </div>
                     @error('login')<p class="mt-1 text-xs text-red-600">{{ $message }}</p>@enderror
@@ -56,9 +56,9 @@
                             <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
                         </div>
                         <input id="password" type="password" name="password" required
-                            class="w-full pl-11 pr-12 py-2.5 rounded-lg border @error('password') border-red-300 ring-2 ring-red-100 @else border-gray-200 @enderror focus:border-rosebrand-500 focus:ring-2 focus:ring-rosebrand-200 outline-none transition-all text-sm"
+                            class="w-full pl-11 pr-12 py-2.5 rounded-lg border @error('password') border-red-300 ring-2 ring-red-100 @else border-gray-200 @enderror focus:border-violet-500 focus:ring-2 focus:ring-violet-200 outline-none transition-all text-sm"
                             placeholder="Create a strong password">
-                        <button type="button" onclick="togglePassword('password')" class="absolute inset-y-0 right-0 pr-3.5 flex items-center text-gray-400 hover:text-rosebrand-600 transition-colors">
+                        <button type="button" onclick="togglePassword('password')" class="absolute inset-y-0 right-0 pr-3.5 flex items-center text-gray-400 hover:text-violet-600 transition-colors">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" id="password-icon"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
                         </button>
                     </div>
@@ -99,7 +99,7 @@
             {{-- Login link --}}
             <p class="mt-8 text-center text-sm text-gray-500">
                 Already have an account?
-                <a href="{{ route('mother.login') }}" class="font-semibold text-rosebrand-600 hover:text-rosebrand-700 transition-colors">Sign in</a>
+                <a href="{{ route('mother.login') }}" class="font-semibold text-violet-600 hover:text-violet-700 transition-colors">Sign in</a>
             </p>
         </div>
     </div>
